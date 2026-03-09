@@ -5189,14 +5189,14 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
 .navbar .mobile-hamburger-btn, .navbar .mobile-close-btn { color: #F7F7F7 !important; }
 .navbar-toggler { color: #F7F7F7 !important; border-color: #F7F7F744 !important; }
 .navbar-toggler-icon { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23F7F7F7' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important; }
-.navbar .dropdown-menu { background-color: #141414 !important; }
+.navbar .dropdown-menu { background-color: #F7F7F7 !important; }
 .navbar .dropdown-menu li a,
 .navbar .dropdown-menu .dropdown-item { color: #F7F7F7 !important; }
 .navbar .dropdown-menu li a:hover,
 .navbar .dropdown-menu .dropdown-item:hover { color: #21C063 !important; background-color: rgba(128,128,128,0.1) !important; }
 .navbar .sub-menu,
 .navbar ul.sub-menu,
-nav.navbar .sub-menu { background-color: #141414 !important; }
+nav.navbar .sub-menu { background-color: #F7F7F7 !important; }
 .navbar .sub-menu a,
 .navbar .sub-menu li a,
 .navbar .nav-menu .sub-menu a,
@@ -5236,22 +5236,22 @@ nav.navbar .sub-menu li a:hover { color: #21C063 !important; background-color: r
 .navbar .cart-link.nav-cart svg, .navbar .login-link.nav-login svg, .navbar .nav-search-toggle svg, .navbar .search-toggle svg { color: inherit !important; fill: none !important; stroke: currentColor !important; }
 
 @media (min-width: 769px) {
-  .navbar:not(.scrolled) .dropdown-menu { background-color: #141414 !important; }
+  .navbar:not(.scrolled) .dropdown-menu { background-color: #F7F7F7 !important; }
   .navbar:not(.scrolled) .dropdown-menu li a,
-  .navbar:not(.scrolled) .dropdown-menu .dropdown-item { color: #F7F7F7 !important; }
+  .navbar:not(.scrolled) .dropdown-menu .dropdown-item { color: #222222 !important; }
   .navbar:not(.scrolled) .dropdown-menu li a:hover,
   .navbar:not(.scrolled) .dropdown-menu .dropdown-item:hover { color: var(--nav-text-hover, var(--primary)) !important; }
-  .navbar:not(.scrolled) .sub-menu { background-color: #141414 !important; }
+  .navbar:not(.scrolled) .sub-menu { background-color: #F7F7F7 !important; }
   .navbar:not(.scrolled) .sub-menu a,
   .navbar:not(.scrolled) .sub-menu li a,
   .navbar:not(.scrolled) .nav-menu .sub-menu a,
-  .navbar:not(.scrolled) .zappy-products-dropdown .sub-menu a { color: #F7F7F7 !important; }
+  .navbar:not(.scrolled) .zappy-products-dropdown .sub-menu a { color: #222222 !important; }
   .navbar:not(.scrolled) .sub-menu a:hover,
   .navbar:not(.scrolled) .sub-menu li a:hover { color: var(--nav-text-hover, var(--primary)) !important; }
 }
-.navbar.scrolled { background-color: rgba(20,20,20,0.85) !important; background-image: none !important; backdrop-filter: blur(12px) !important; -webkit-backdrop-filter: blur(12px) !important; box-shadow: 0 2px 16px rgba(0,0,0,0.12) !important; }
+.navbar.scrolled { background-color: rgba(247,247,247,0.85) !important; background-image: none !important; backdrop-filter: blur(12px) !important; -webkit-backdrop-filter: blur(12px) !important; box-shadow: 0 2px 16px rgba(0,0,0,0.12) !important; }
 .navbar.scrolled::before, .navbar.scrolled::after { background: transparent !important; opacity: 0 !important; }
-.navbar.scrolled ~ .zappy-catalog-menu, .navbar.scrolled ~ #zappy-catalog-menu, .zappy-catalog-menu.scrolled, #zappy-catalog-menu.scrolled { background: rgba(20,20,20,0.85) !important; background-image: none !important; backdrop-filter: blur(12px) !important; -webkit-backdrop-filter: blur(12px) !important; }
+.navbar.scrolled ~ .zappy-catalog-menu, .navbar.scrolled ~ #zappy-catalog-menu, .zappy-catalog-menu.scrolled, #zappy-catalog-menu.scrolled { background: rgba(247,247,247,0.85) !important; background-image: none !important; backdrop-filter: blur(12px) !important; -webkit-backdrop-filter: blur(12px) !important; }
 .zappy-catalog-menu.scrolled .catalog-menu-item,
 .zappy-catalog-menu.scrolled .catalog-menu-all,
 #zappy-catalog-menu.scrolled .catalog-menu-item,
@@ -5259,7 +5259,7 @@ nav.navbar .sub-menu li a:hover { color: #21C063 !important; background-color: r
 .navbar.scrolled ~ .zappy-catalog-menu .catalog-menu-item,
 .navbar.scrolled ~ .zappy-catalog-menu .catalog-menu-all,
 .navbar.scrolled ~ #zappy-catalog-menu .catalog-menu-item,
-.navbar.scrolled ~ #zappy-catalog-menu .catalog-menu-all { color: var(--frosted-text, #F7F7F7) !important; }
+.navbar.scrolled ~ #zappy-catalog-menu .catalog-menu-all { color: var(--frosted-text, #222222) !important; }
 .zappy-catalog-menu.scrolled .catalog-menu-item:hover,
 .zappy-catalog-menu.scrolled .catalog-menu-all:hover,
 #zappy-catalog-menu.scrolled .catalog-menu-item:hover,
@@ -5271,20 +5271,41 @@ nav.navbar .sub-menu li a:hover { color: #21C063 !important; background-color: r
 .navbar.scrolled .nav-menu > li > a,
 .navbar.scrolled .nav-menu > .nav-item > a,
 .navbar.scrolled .nav-link,
-.navbar.scrolled a { color: var(--frosted-text, #F7F7F7) !important; }
+.navbar.scrolled a { color: var(--frosted-text, #222222) !important; }
 .navbar.scrolled .nav-menu > li > a:hover,
 .navbar.scrolled .nav-menu > .nav-item > a:hover,
 .navbar.scrolled .nav-link:hover,
 .navbar.scrolled a:hover { color: var(--nav-text-hover, var(--primary)) !important; }
-.navbar.scrolled .navbar-brand, .navbar.scrolled .navbar-brand a { color: var(--frosted-text, #F7F7F7) !important; }
-.navbar.scrolled .dropdown-toggle { color: var(--frosted-text, #F7F7F7) !important; }
-.navbar.scrolled .mobile-hamburger-btn, .navbar.scrolled .mobile-close-btn { color: var(--frosted-text, #F7F7F7) !important; }
-.navbar.scrolled .phone-header-btn { color: var(--frosted-text, #F7F7F7) !important; }
-.navbar.scrolled .mobile-toggle { color: var(--frosted-text, #F7F7F7) !important; }
+.navbar.scrolled .navbar-brand, .navbar.scrolled .navbar-brand a { color: var(--frosted-text, #222222) !important; }
+.navbar.scrolled .dropdown-toggle { color: var(--frosted-text, #222222) !important; }
+.navbar.scrolled .mobile-hamburger-btn, .navbar.scrolled .mobile-close-btn { color: var(--frosted-text, #222222) !important; }
+.navbar.scrolled .phone-header-btn { color: var(--frosted-text, #222222) !important; }
+.navbar.scrolled .mobile-toggle { color: var(--frosted-text, #222222) !important; }
 .navbar.scrolled .mobile-toggle svg { color: inherit !important; }
 .navbar.scrolled .mobile-toggle svg path { stroke: currentColor !important; }
-.navbar.scrolled .nav-search-btn { color: var(--frosted-text, #F7F7F7) !important; }
-.navbar.scrolled .nav-search-btn svg { stroke: var(--frosted-text, #F7F7F7) !important; fill: none !important; }
+.navbar.scrolled .nav-search-btn { color: var(--frosted-text, #222222) !important; }
+.navbar.scrolled .nav-search-btn svg { stroke: var(--frosted-text, #222222) !important; fill: none !important; }
+@media (min-width: 769px) {
+  .navbar.scrolled .sub-menu,
+  .navbar.scrolled ul.sub-menu,
+  nav.navbar.scrolled .sub-menu { background-color: #F7F7F7 !important; border-radius: 8px !important; box-shadow: 0 4px 20px rgba(0,0,0,0.15) !important; }
+  .navbar.scrolled .sub-menu a,
+  .navbar.scrolled .sub-menu li a,
+  .navbar.scrolled .nav-menu .sub-menu a,
+  .navbar.scrolled .nav-menu .sub-menu li a,
+  .navbar.scrolled .zappy-products-dropdown .sub-menu a,
+  nav.navbar.scrolled .sub-menu li a { color: #222222 !important; }
+  .navbar.scrolled .sub-menu a:hover,
+  .navbar.scrolled .sub-menu li a:hover,
+  .navbar.scrolled .nav-menu .sub-menu a:hover,
+  nav.navbar.scrolled .sub-menu li a:hover { color: #21C063 !important; background-color: rgba(128,128,128,0.1) !important; }
+  .navbar.scrolled .dropdown-menu { background-color: #F7F7F7 !important; }
+  .navbar.scrolled .dropdown-menu li a,
+  .navbar.scrolled .dropdown-menu .dropdown-item { color: #222222 !important; }
+  .navbar.scrolled .dropdown-menu li a:hover,
+  .navbar.scrolled .dropdown-menu .dropdown-item:hover { color: #21C063 !important; background-color: rgba(128,128,128,0.1) !important; }
+  .navbar.scrolled .mobile-submenu-toggle { color: #222222 !important; }
+}
 
 .navbar.scrolled .cart-link.nav-cart,
 .navbar.scrolled .login-link.nav-login,
@@ -5294,17 +5315,17 @@ nav.navbar .sub-menu li a:hover { color: #21C063 !important; background-color: r
   .navbar { background-color: transparent !important; background-image: none !important; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; box-shadow: none !important; }
   .zappy-catalog-menu, #zappy-catalog-menu { background-image: none !important; }
   .navbar::before, .navbar::after { background: transparent !important; opacity: 0 !important; }
-  body.menu-open .navbar, body.nav-open .navbar, body.mobile-menu-open .navbar, .navbar.scrolled, .navbar.active, .navbar.open, .navbar.show, .navbar.menu-open, .navbar:has(.nav-menu.active), .navbar:has(#navMenu.active), .navbar:has(.mobile-menu.active), .navbar:has(.mobile-toggle.active), .navbar:has(#mobileToggle.active) { background-color: #141414 !important; }
-  .nav-menu, .nav-menu.active, .nav-menu.nav-menu-active, #navMenu, #navMenu.active, .mobile-menu, .mobile-menu.active, .mobile-nav, .mobile-nav.active { background-color: #141414 !important; background: #141414 !important; }
-  .nav-menu a, .nav-menu > li > a, #navMenu a, #navMenu > li > a { color: #F7F7F7 !important; }
+  body.menu-open .navbar, body.nav-open .navbar, body.mobile-menu-open .navbar, .navbar.scrolled, .navbar.active, .navbar.open, .navbar.show, .navbar.menu-open, .navbar:has(.nav-menu.active), .navbar:has(#navMenu.active), .navbar:has(.mobile-menu.active), .navbar:has(.mobile-toggle.active), .navbar:has(#mobileToggle.active) { background-color: #F7F7F7 !important; }
+  .nav-menu, .nav-menu.active, .nav-menu.nav-menu-active, #navMenu, #navMenu.active, .mobile-menu, .mobile-menu.active, .mobile-nav, .mobile-nav.active { background-color: #F7F7F7 !important; background: #F7F7F7 !important; }
+  .nav-menu a, .nav-menu > li > a, #navMenu a, #navMenu > li > a { color: #222222 !important; }
   .nav-menu a:hover, .nav-menu > li > a:hover { color: #21C063 !important; }
   .nav-menu .dropdown-menu { background: rgba(128,128,128,0.06) !important; }
-  .nav-menu .dropdown-menu a, .nav-menu .dropdown-menu li a { color: #F7F7F7 !important; }
+  .nav-menu .dropdown-menu a, .nav-menu .dropdown-menu li a { color: #222222 !important; }
   .nav-menu .dropdown-menu a:hover { color: #21C063 !important; }
-  .nav-menu .sub-menu a { color: #F7F7F7 !important; }
+  .nav-menu .sub-menu a { color: #222222 !important; }
   .nav-menu .sub-menu a:hover { color: #21C063 !important; }
   .nav-menu > li { position: relative !important; }
-  .navbar .nav-menu .mobile-submenu-toggle { color: #F7F7F7 !important; position: static !important; height: auto !important; flex-shrink: 0 !important; align-self: stretch !important; }
+  .navbar .nav-menu .mobile-submenu-toggle { color: #222222 !important; position: static !important; height: auto !important; flex-shrink: 0 !important; align-self: stretch !important; }
   .mobile-toggle { color: #F7F7F7 !important; }
   .mobile-toggle svg { color: inherit !important; }
   .mobile-toggle svg path { stroke: currentColor !important; }
@@ -5321,7 +5342,7 @@ nav.navbar .sub-menu li a:hover { color: #21C063 !important; background-color: r
   body.menu-open .navbar .phone-header-btn, body.nav-open .navbar .phone-header-btn, body.mobile-menu-open .navbar .phone-header-btn,
   .navbar.active .phone-header-btn, .navbar.open .phone-header-btn, .navbar.show .phone-header-btn, .navbar.menu-open .phone-header-btn,
   .navbar:has(.nav-menu.active) .phone-header-btn, .navbar:has(#navMenu.active) .phone-header-btn, .navbar:has(.mobile-menu.active) .phone-header-btn, .navbar:has(.mobile-toggle.active) .phone-header-btn {
-    color: #F7F7F7 !important;
+    color: #222222 !important;
   }
   
   .navbar.scrolled .mobile-toggle svg { color: inherit !important; }
@@ -5330,7 +5351,7 @@ nav.navbar .sub-menu li a:hover { color: #21C063 !important; background-color: r
   .navbar.scrolled .nav-menu > li > a,
   .navbar.scrolled .nav-menu > .nav-item > a,
   .navbar.scrolled .nav-link,
-  .navbar.scrolled a { color: #F7F7F7 !important; }
+  .navbar.scrolled a { color: #222222 !important; }
   .cart-link.nav-cart,
   .login-link.nav-login,
   .nav-search-toggle,
@@ -5339,11 +5360,12 @@ nav.navbar .sub-menu li a:hover { color: #21C063 !important; background-color: r
   .login-link.nav-login svg,
   .nav-search-toggle svg,
   .search-toggle svg { stroke: var(--text-dark, #1a1a1a) !important; color: var(--text-dark, #1a1a1a) !important; }
-  .mobile-search-panel input { color: #F7F7F7 !important; background: rgba(255,255,255,0.12) !important; }
-  .mobile-search-panel .close-search { color: #F7F7F7 !important; background: rgba(255,255,255,0.15) !important; }
-  .mobile-search-panel .close-search svg { stroke: #F7F7F7 !important; color: #F7F7F7 !important; }
-  .mobile-search-panel .close-search:hover { color: #F7F7F7 !important; background: rgba(255,255,255,0.25) !important; }
-  .mobile-search-panel .close-search:hover svg { stroke: #F7F7F7 !important; color: #F7F7F7 !important; }
+  .mobile-search-panel { color: #222222 !important; }
+  .mobile-search-panel input { color: #222222 !important; background: #F7F7F7 !important; }
+  .mobile-search-panel .close-search { color: #222222 !important; background: #F7F7F7 !important; }
+  .mobile-search-panel .close-search svg { stroke: #222222 !important; color: #222222 !important; }
+  .mobile-search-panel .close-search:hover { color: #222222 !important; background: #ebebeb !important; }
+  .mobile-search-panel .close-search:hover svg { stroke: #222222 !important; color: #222222 !important; }
   .navbar .zappy-products-dropdown .sub-menu,
   .navbar .zappy-products-dropdown > .sub-menu {
     display: none !important; position: static !important; max-height: 0 !important;
@@ -9652,6 +9674,22 @@ body.accessibility-widget-visible ._access-menu {
 @media (max-width: 480px) { .favorites-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; } }
 /* ========== END PRODUCT ICON STYLES ========== */
 
+/* ========== ORPHANED_ZOOM_IMG_FIX ========== */
+@media (max-width: 768px) {
+  .zappy-preserve-css-grid > img[data-zappy-zoom],
+  [class*="-grid"] > img[data-zappy-zoom] {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100% !important;
+    max-height: 300px !important;
+    object-fit: cover !important;
+    left: auto !important;
+    top: auto !important;
+  }
+}
+/* ========== END ORPHANED_ZOOM_IMG_FIX ========== */
+
 
 /* ========== GRID RESPONSIVE FIX (zappy-grid-mobile-fix) ========== */
 /* Ensures grids with explicit columns use CSS variable and are responsive on mobile */
@@ -9790,23 +9828,6 @@ body.accessibility-widget-visible ._access-menu {
     left: auto !important;
     right: auto !important;
     bottom: auto !important;
-  }
-  
-  /* Orphaned zoom-cropped images: absolutely-positioned images with zoom data
-     that are NOT inside a proper zoom wrapper. These overflow their grid container
-     and in RTL layouts cause the entire page to shift, clipping content. */
-  .zappy-preserve-css-grid > img[style*="position: absolute"],
-  .zappy-preserve-css-grid > img[style*="position:absolute"],
-  [class*="-grid"] > img[style*="position: absolute"],
-  [class*="-grid"] > img[style*="position:absolute"] {
-    position: relative !important;
-    width: 100% !important;
-    height: auto !important;
-    max-width: 100% !important;
-    max-height: 300px !important;
-    object-fit: cover !important;
-    left: auto !important;
-    top: auto !important;
   }
   
   /* Carousel: ensure block display on mobile */
