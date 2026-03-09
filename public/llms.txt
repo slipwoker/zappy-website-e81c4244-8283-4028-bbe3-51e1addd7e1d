@@ -1,59 +1,69 @@
-# Business — Generative Engine Optimization Map
+# רוז פרינט — Generative Engine Optimization Map
+
+> Rose Print is a promotional products printing company with an experienced team specializing in printing on virtually any surface or item. They pride themselves on identifying trends and offering cutting-edge printing solutions, from bottles and phone cases to custom wood blocks, acrylic displays, and recognition plaques. The brand emphasizes exceptional service quality, versatility, and the ability to fulfill any custom printing request with the latest machinery and fastest turnaround times.
 
 ---
 
 ## Pages
 
 ### בית
-https://example.com
+https://rose-print.zappy5.app
 רוז פרינט מדפיסה על כל משטח ופריט - ספלים, בקבוקים, תיקים ומתנות ממותגות לעסקים. טכנולוגיה חדשנית, זמני אספקה מהירים ושירות ללא פשרות.
 
 ### יכולות
-https://example.com/capabilities
+https://rose-print.zappy5.app/capabilities
 גלו את מגוון יכולות ההדפסה שלנו: הדפסה על עץ, אקריל, זכוכית, מתכת, טקסטיל ועוד. מכונות מתקדמות ופתרונות הדפסה ייחודיים לכל צורך עסקי.
 
 ### דוגמאות עבודה
-https://example.com/work-samples
+https://rose-print.zappy5.app/work-samples
 צפו בדוגמאות עבודה מרשימות של הדפסה על ספלים, בקבוקים, לוחות הוקרה ומוצרי פרסום ייחודיים. קבלו רעיונות למיתוג העסק שלכם עם רוז פרינט.
 
 ### צור קשר
-https://example.com/contact
+https://rose-print.zappy5.app/contact
 צוות מומחים מחכה לכם! קבלו הצעת מחיר מיידית להדפסה על מוצרי פרסום, ספלים ומתנות ממותגות. שירות אישי, ייעוץ מקצועי וביצוע מהיר.
 
 ### Products
-https://example.com/products
+https://rose-print.zappy5.app/products
 המוצרים שלנו - רוז פרינט
 
 ### Product Detail
-https://example.com/product/:slug
+https://rose-print.zappy5.app/product/:slug
 פרטי המוצר - רוז פרינט
 
 ### Category
-https://example.com/category/:slug
+https://rose-print.zappy5.app/category/:slug
 מוצרים - רוז פרינט
 
 ## Legal & Policy
 
 ### Privacy Policy
-https://example.com/privacy
+https://rose-print.zappy5.app/privacy
 Information about how user data is collected, stored, and protected.
 
 ### Terms & Conditions
-https://example.com/terms
+https://rose-print.zappy5.app/terms
 Legal terms describing service usage, rights, and policies.
 
 ### Accessibility Statement
-https://example.com/accessibility
+https://rose-print.zappy5.app/accessibility
 Information about WCAG compliance and accessibility features.
 
 ---
 
 # Business Context (for LLM understanding)
 
-## About Business
+## About רוז פרינט
+Rose Print is a promotional products printing company with an experienced team specializing in printing on virtually any surface or item. They pride themselves on identifying trends and offering cutting-edge printing solutions, from bottles and phone cases to custom wood blocks, acrylic displays, and recognition plaques. The brand emphasizes exceptional service quality, versatility, and the ability to fulfill any custom printing request with the latest machinery and fastest turnaround times.
+
+## Target Audience
+עסקים המחפשים מוצרי פרסום, קידום מכירות ומתנות ממותגות
+
+## Industry
+הדפסה ומיתוג
+
 ---
 
 # Additional Resources
 
-- **Sitemap**: https://example.com/sitemap.xml
-- **Robots.txt**: https://example.com/robots.txt
+- **Sitemap**: https://rose-print.zappy5.app/sitemap.xml
+- **Robots.txt**: https://rose-print.zappy5.app/robots.txt
