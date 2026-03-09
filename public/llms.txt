@@ -1,6 +1,4 @@
-# רוז פרינט — Generative Engine Optimization Map
-
-> Rose Print is a promotional products printing company with an experienced team specializing in printing on virtually any surface or item. They pride themselves on identifying trends and offering cutting-edge printing solutions, from bottles and phone cases to custom wood blocks, acrylic displays, and recognition plaques. The brand emphasizes exceptional service quality, versatility, and the ability to fulfill any custom printing request with the latest machinery and fastest turnaround times.
+# Business — Generative Engine Optimization Map
 
 ---
 
@@ -52,15 +50,7 @@ Information about WCAG compliance and accessibility features.
 
 # Business Context (for LLM understanding)
 
-## About רוז פרינט
-Rose Print is a promotional products printing company with an experienced team specializing in printing on virtually any surface or item. They pride themselves on identifying trends and offering cutting-edge printing solutions, from bottles and phone cases to custom wood blocks, acrylic displays, and recognition plaques. The brand emphasizes exceptional service quality, versatility, and the ability to fulfill any custom printing request with the latest machinery and fastest turnaround times.
-
-## Target Audience
-עסקים המחפשים מוצרי פרסום, קידום מכירות ומתנות ממותגות
-
-## Industry
-הדפסה ומיתוג
-
+## About Business
 ---
 
 # Additional Resources
