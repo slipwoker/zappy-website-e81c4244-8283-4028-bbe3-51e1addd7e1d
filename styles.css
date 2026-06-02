@@ -4969,7 +4969,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
   html, body {
     width: 100% !important;
     max-width: 100vw !important;
-    overflow-x: hidden !important;
+    overflow-x: clip !important;
     box-sizing: border-box !important;
   }
   
@@ -5466,23 +5466,7 @@ nav.navbar .sub-menu li a:hover { color: #21C063 !important; background-color: r
 
 .legal-page-content .contact-box a:hover {
   opacity: 0.8;
-}
-
-
-/* Cookie Consent Styles */
-
-/* Cookie Consent Customizations */
-:root {
-  --cc-btn-primary-bg: #3b82f6;
-  --cc-btn-primary-border: #3b82f6;
-  --cc-btn-primary-hover-bg: #2269dd;
-}
-
-#cc--main {
-  font-family: inherit !important;
-}
-
-.cc-btn.cc--btn-primary {
+}.cc-btn.cc--btn-primary {
   background-color: var(--cc-btn-primary-bg) !important;
   border-color: var(--cc-btn-primary-border) !important;
 }
@@ -5491,24 +5475,7 @@ nav.navbar .sub-menu li a:hover { color: #21C063 !important; background-color: r
   background-color: var(--cc-btn-primary-hover-bg) !important;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  #cc--main .cc__btn {
-    font-size: 14px !important;
-    padding: 8px 16px !important;
-  }
-  
-  .cc__modal .cc__modal-content {
-    margin: 10px !important;
-  }
-}
-
-/* Cookie preferences button in footer */
-.cookie-preferences-btn:hover {
-  text-decoration: none !important;
-}
-
-/* Accessibility Styles */
+/* Responsive adjustments *//* Cookie preferences button in footer *//* Accessibility Styles */
 
 /* Basic Accessibility Enhancements */
 :root {
@@ -5525,8 +5492,7 @@ nav.navbar .sub-menu li a:hover { color: #21C063 !important; background-color: r
   padding: 8px !important;
   text-decoration: none !important;
   z-index: 10000 !important;
-  border-radius: 4px !important;
-}
+  border-radius: 4px !important; transform: none; }
 
 /* Enhanced focus indicators */
 *:focus {
@@ -5599,11 +5565,6 @@ nav.navbar .sub-menu li a:hover { color: #21C063 !important; background-color: r
 }
 
 /* Hide text nodes specifically */
-#mic-access-tool-general-button::before,
-#mic-access-tool-general-button::after {
-  content: none !important;
-  display: none !important;
-}
 
 /* Hover state - keep text hidden */
 #mic-access-tool-general-button:hover {
@@ -5717,74 +5678,32 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 /* TODO: Can be re-enabled in the future by removing display: none */
 /* The widget can be shown via ALT+A keyboard shortcut (desktop only) */
 /* Target Mickidum accessibility button with high specificity */
-#mic-access-tool-general-button,
-.mic-access-tool-general-button,
-#mic-init-access-tool .mic-access-tool-general-button,
-#mic-init-access-tool #mic-access-tool-general-button,
-._access-icon {
-  display: none !important; /* Hidden by default - can be re-enabled */
-}
 
 /* Target Mickidum accessibility menu with high specificity */
-#mic-access-tool-box,
-.mic-access-tool-box,
-#mic-init-access-tool #mic-access-tool-box,
-div[id*="mic-access-tool-box"],
-._access-menu {
-  display: none !important; /* Hidden by default - can be re-enabled */
-}
 
 /* Show accessibility widget when ALT+A keyboard shortcut is used (desktop only) */
-body.accessibility-widget-visible #mic-access-tool-general-button,
-body.accessibility-widget-visible .mic-access-tool-general-button,
-body.accessibility-widget-visible #mic-init-access-tool .mic-access-tool-general-button,
-body.accessibility-widget-visible #mic-init-access-tool #mic-access-tool-general-button,
-body.accessibility-widget-visible ._access-icon {
-  display: flex !important; /* Show button when visible class is added */
-}
 
-body.accessibility-widget-visible #mic-access-tool-box,
-body.accessibility-widget-visible .mic-access-tool-box,
-body.accessibility-widget-visible #mic-init-access-tool #mic-access-tool-box,
-body.accessibility-widget-visible div[id*="mic-access-tool-box"],
-body.accessibility-widget-visible ._access-menu {
-  display: block !important; /* Show menu when visible class is added */
-}
 
 /* On mobile, ensure it stays hidden */
 @media (max-width: 768px) {
   /* Hide the accessibility button on mobile - higher specificity */
-  #mic-access-tool-general-button,
-  .mic-access-tool-general-button,
-  #mic-init-access-tool .mic-access-tool-general-button,
-  #mic-init-access-tool #mic-access-tool-general-button,
-  ._access-icon {
-    display: none !important; /* Hidden on mobile - can be re-enabled */
-  }
   
   /* Hide the accessibility menu on mobile - higher specificity */
-  #mic-access-tool-box,
-  .mic-access-tool-box,
-  #mic-init-access-tool #mic-access-tool-box,
-  div[id*="mic-access-tool-box"],
-  ._access-menu {
-    display: none !important; /* Hidden on mobile - can be re-enabled */
-  }
   
   /* Ensure mobile never shows widget even with keyboard shortcut */
-  body.accessibility-widget-visible #mic-access-tool-general-button,
-  body.accessibility-widget-visible .mic-access-tool-general-button,
-  body.accessibility-widget-visible #mic-init-access-tool .mic-access-tool-general-button,
-  body.accessibility-widget-visible #mic-init-access-tool #mic-access-tool-general-button,
-  body.accessibility-widget-visible ._access-icon,
-  body.accessibility-widget-visible #mic-access-tool-box,
-  body.accessibility-widget-visible .mic-access-tool-box,
-  body.accessibility-widget-visible #mic-init-access-tool #mic-access-tool-box,
-  body.accessibility-widget-visible div[id*="mic-access-tool-box"],
-  body.accessibility-widget-visible ._access-menu {
-    display: none !important;
-  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5868,12 +5787,12 @@ main.page-container.ecommerce-page,
 
 /* Product cards - V2 themed (full-bleed media + overlay favorite) */
 .product-card {
-  border: 1px solid var(--border-dark);
+  border: none;
   border-radius: 12px;
   padding: 0;
   overflow: hidden;
   background: rgba(255,255,255,0.05);
-  transition: box-shadow 0.2s, border-color 0.2s;
+  transition: box-shadow 0.2s;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -5881,7 +5800,6 @@ main.page-container.ecommerce-page,
 }
 .product-card:hover {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  border-color: var(--accent);
 }
 .product-card .product-card-inner {
   display: flex;
@@ -6019,7 +5937,7 @@ a, button {
   background: rgba(255,255,255,1);
   box-shadow: 0 2px 10px rgba(231,76,60,0.22);
 }
-.card-favorite-btn svg { width: 18px; height: 18px; }
+.card-favorite-btn svg, .product-card .card-quickview-btn svg { width: 18px; height: 18px; }
 [dir="rtl"] .card-favorite-btn {
   left: 8px;
   right: auto;
@@ -6033,7 +5951,8 @@ a, button {
 }
 .product-card h3 {
   margin: 0 0 6px;
-  font-size: 16px;
+  font-size: 18px !important;
+  font-weight: 700 !important;
   color: inherit;
   line-height: 1.3 !important;
   display: -webkit-box;
@@ -6045,7 +5964,7 @@ a, button {
   word-break: break-word;
 }
 .product-card p {
-  font-size: 14px !important;
+  font-size: 16px !important;
   color: var(--text-muted);
   line-height: 1.45em !important;
   display: -webkit-box !important;
@@ -6116,30 +6035,152 @@ a, button {
   box-sizing: border-box;
 }
 
-/* Product card layout variants */
-.product-grid.layout-compact { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 16px; }
-.product-grid:not(.view-list) .product-card.compact .product-card-media { aspect-ratio: 1 / 1; }
-.product-card.compact .card-content { padding: 10px 12px 12px; }
-.product-card.compact h3 { font-size: 14px; margin: 0 0 4px; -webkit-line-clamp: 1; }
-.product-card.compact p { display: none; }
-.product-card.compact .price { font-size: 16px; padding-top: 2px; }
-.product-card.compact .add-to-cart { display: none; }
-
+/* Product card layout variants (Standard square / Portrait tall) */
 .product-grid.layout-standard { grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 24px; }
 .product-card.standard p { -webkit-line-clamp: 2 !important; }
-.product-card.standard .add-to-cart { display: none; }
+.product-grid.layout-portrait { grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 24px; }
+.product-card.portrait p { -webkit-line-clamp: 2 !important; }
+.product-grid.layout-compact, .product-grid.layout-detailed { grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 24px; }
+.product-grid:not(.view-list) .product-card.portrait .product-card-media { aspect-ratio: 3 / 4; }
+.product-grid:not(.view-list) .product-card.portrait .product-card-image-link img { object-fit: cover !important; }
 
-.product-grid.layout-detailed { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 28px; }
-.product-grid:not(.view-list) .product-card.detailed .product-card-media { aspect-ratio: 1 / 1; }
-.product-card.detailed .card-content { padding: 14px 16px 12px; }
-.product-card.detailed h3 { font-size: 18px; margin: 0 0 8px; -webkit-line-clamp: 2; }
-.product-card.detailed p {
-  -webkit-line-clamp: 8 !important;
-  margin-bottom: 8px;
-  min-height: 0;
+/* ===== Product card v2 (standard/portrait) ===== */
+.product-card .product-card-body { display: flex; flex-direction: column; flex: 1; min-width: 0; padding: 12px 14px 14px; }
+.product-grid:not(.view-list) .product-card .product-card-body .card-content { padding: 0; }
+.product-card .card-desc { color: var(--text-secondary, #6b7280); font-size: 16px; line-height: 1.35; margin: 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.product-card .product-card-actions { position: absolute; top: 10px; inset-inline-end: 10px; z-index: 5; display: flex; flex-direction: column; gap: 8px; align-items: center; }
+.product-card .product-card-actions .card-favorite-btn,
+.product-card .card-quickview-btn { position: static; top: auto; right: auto; left: auto; inset: auto; width: 34px; height: 34px; border-radius: 50%; border: none; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.92); color: var(--text, #374151); box-shadow: 0 1px 4px rgba(0,0,0,0.12); transition: transform 0.15s, background 0.15s; }
+.product-card .card-quickview-btn:hover,
+.product-card .product-card-actions .card-favorite-btn:hover { background: #fff; transform: scale(1.08); }
+.product-card .card-quickview-btn { opacity: 0; pointer-events: none; }
+.product-card:hover .card-quickview-btn { opacity: 1; pointer-events: auto; }
+.zc-swatches { display: flex; align-items: center; gap: 4px; margin: 8px 0 0; position: relative; }
+.zc-swatch-track { flex: 1 1 auto; min-width: 0; display: flex; align-items: center; gap: 6px; overflow-x: auto; scroll-behavior: smooth; scrollbar-width: none; -ms-overflow-style: none; padding: 2px; }
+.zc-swatch-track::-webkit-scrollbar { display: none; }
+/* No transform/transition on swatches: a scale-up on select (sticky :hover on touch)
+   briefly enlarged the dot and pushed the 2px selected ring past the scroll-track's clip
+   region, so the ring looked cut off at the top for ~half a second before settling. The
+   selected ring must appear instantly in its final, non-clipped state. */
+.zc-swatch { width: 20px; height: 20px; min-width: 20px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.12); background: none; padding: 0; cursor: pointer; position: relative; display: inline-flex; align-items: center; justify-content: center; }
+.zc-swatch .zc-swatch-dot { width: 100%; height: 100%; border-radius: 50%; display: block; }
+.zc-swatch.selected { box-shadow: 0 0 0 2px var(--accent, var(--primary, #ff0083)); border-color: transparent; }
+.zc-swatch.out-of-stock { opacity: 0.45; }
+.zc-swatch.out-of-stock::after { content: ''; position: absolute; inset: 0; border-radius: 50%; background: linear-gradient(to top left, transparent calc(50% - 1px), rgba(0,0,0,0.55) 50%, transparent calc(50% + 1px)); pointer-events: none; }
+.product-card-size-overlay { position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; padding: 8px; background: linear-gradient(to top, rgba(0,0,0,0.45), transparent); opacity: 0; transform: translateY(6px); transition: opacity 0.18s, transform 0.18s; pointer-events: none; }
+.product-card:hover .product-card-size-overlay,
+.product-card.zc-sizes-pinned .product-card-size-overlay { opacity: 1; transform: translateY(0); pointer-events: auto; }
+.zc-size-strip { display: flex; align-items: center; gap: 4px; }
+.zc-size-track { flex: 1 1 auto; min-width: 0; display: flex; align-items: center; gap: 6px; overflow-x: auto; scroll-behavior: smooth; scrollbar-width: none; -ms-overflow-style: none; }
+.zc-size-track::-webkit-scrollbar { display: none; }
+.zc-size { min-width: 30px; height: 28px; padding: 0 8px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.8); background: rgba(255,255,255,0.95); color: #111; font-size: 12px; font-weight: 600; cursor: pointer; position: relative; flex-shrink: 0; }
+.zc-size.selected { background: var(--accent, var(--primary, #ff0083)); color: #fff; border-color: var(--accent, var(--primary, #ff0083)); }
+.zc-size.out-of-stock { opacity: 0.6; }
+.zc-size.out-of-stock::after { content: ''; position: absolute; top: 50%; left: 4px; right: 4px; height: 1px; background: #111; transform: rotate(-12deg); pointer-events: none; }
+/* Scroll arrows (swatches + sizes): exact Figma chevrons — plain stroked glyphs,
+   no circular background/shadow. flex:0 0 auto reserves their own space so they
+   never overlap a swatch/pill (the track is flex:1 1 0 min-width:0 beside them). */
+.zc-scroll { flex: 0 0 auto; width: 16px; height: 16px; padding: 0; border: none; background: transparent; color: #4a4a4a; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; box-shadow: none; }
+.zc-scroll svg { width: 16px; height: 16px; display: block; }
+[dir="rtl"] .zc-scroll svg { transform: scaleX(-1); }
+/* On the size strip the chevrons sit over the dark image-bottom gradient. */
+.zc-size-strip .zc-scroll { color: #fff; }
+.product-card .product-card-footer { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 10px; }
+.product-card .product-card-footer .price { padding-top: 0; }
+.product-card .card-cart-btn { flex-shrink: 0; width: 40px; height: 40px; border-radius: 10px; border: none; cursor: pointer; background: var(--accent, var(--primary, #ff0083)); color: var(--text-light, #fff); display: inline-flex; align-items: center; justify-content: center; transition: filter 0.18s, transform 0.12s; }
+.product-card .card-cart-btn:hover { filter: brightness(0.92); transform: translateY(-1px); }
+.product-card a.card-cart-btn { text-decoration: none; }
+@media (max-width: 768px) {
+  .product-card .product-card-size-overlay { display: none !important; }
+  .product-card .card-quickview-btn { opacity: 1; pointer-events: auto; }
 }
-.product-card.detailed .price { font-size: 20px; padding-top: 8px; }
-.product-card.detailed .add-to-cart { display: block; padding: 12px; margin: 0 14px 14px; align-self: stretch; box-sizing: border-box; }
+
+/* ===== Quick View modal ===== */
+.zappy-qv-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.55); z-index: 1400; }
+.zappy-qv-overlay[hidden] { display: none; }
+/* max-height leaves ~110px top+bottom clearance so a tall (centered) modal never tucks
+   under the sticky site header / catalog sub-nav. The mobile bottom-sheet rule below
+   overrides this with its own 80vh. */
+.zappy-qv-modal { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1401; width: min(960px, 94vw); max-height: calc(100vh - 220px); background: var(--surface, var(--bg, #fff)); border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); overflow: hidden; }
+.zappy-qv-modal[hidden] { display: none; }
+.zappy-qv-close { position: absolute; top: 12px; inset-inline-end: 12px; z-index: 2; width: 36px; height: 36px; border-radius: 50%; border: none; background: rgba(255,255,255,0.92); color: #111; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; box-shadow: 0 1px 4px rgba(0,0,0,0.15); }
+.zappy-qv-close:hover { background: #fff; }
+.zappy-qv-content { display: flex; gap: 0; max-height: calc(100vh - 220px); overflow: hidden; }
+.zappy-qv-loading { padding: 60px 24px; text-align: center; color: var(--text-secondary, #6b7280); width: 100%; }
+.zappy-qv-gallery { flex: 1 1 50%; min-width: 0; background: #f3f4f6; display: flex; flex-direction: column; }
+.zappy-qv-main-img { position: relative; flex: 1; min-height: 320px; }
+/* width/height are !important so a generated theme's responsive "img { height: auto !important }"
+   rule (common on mobile) can't collapse this absolutely-positioned image to its intrinsic
+   square size, which would make it overflow the fixed-height frame and cover the thumbnail
+   strip + title on the mobile sheet. Our selector (0,1,1) out-ranks the bare img rule. */
+.zappy-qv-main-img img { position: absolute; inset: 0; width: 100% !important; height: 100% !important; object-fit: contain; }
+.zappy-qv-main-img .no-image-placeholder { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 48px; color: #9ca3af; }
+/* Thumbnail filmstrip: a horizontal scroller with floating prev/next arrows.
+   We keep the modal at a fixed height (the mobile sheet is a hard 80vh) and let
+   the strip scroll instead of wrapping into extra rows that would overflow. */
+.zappy-qv-thumbs-wrap { position: relative; padding: 10px; }
+.zappy-qv-thumbs { display: flex; gap: 8px; overflow-x: auto; scroll-behavior: smooth; scrollbar-width: none; -ms-overflow-style: none; }
+.zappy-qv-thumbs::-webkit-scrollbar { display: none; }
+.zappy-qv-thumb-nav { position: absolute; top: 50%; transform: translateY(-50%); z-index: 3; width: 30px; height: 30px; border-radius: 50%; border: none; background: rgba(255,255,255,0.95); color: #222; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; box-shadow: 0 1px 5px rgba(0,0,0,0.22); padding: 0; }
+.zappy-qv-thumb-nav:hover { background: #fff; }
+.zappy-qv-thumb-nav[hidden] { display: none; }
+.zappy-qv-thumb-nav.prev { inset-inline-start: 4px; }
+.zappy-qv-thumb-nav.next { inset-inline-end: 4px; }
+/* Chevrons are authored left/right (physical); flip them in RTL so prev/next still
+   point toward the inline-start / inline-end edge they sit on. */
+[dir="rtl"] .zappy-qv-thumb-nav svg { transform: scaleX(-1); }
+.zappy-qv-thumb { width: 56px; height: 56px; flex-shrink: 0; border-radius: 8px; overflow: hidden; border: 2px solid transparent; background: #fff; cursor: pointer; padding: 0; }
+.zappy-qv-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.zappy-qv-thumb.selected { border-color: var(--accent, var(--primary, #ff0083)); }
+.zappy-qv-info { flex: 1 1 50%; min-width: 0; padding: 36px 28px 28px; overflow-y: auto; display: flex; flex-direction: column; gap: 14px; }
+.zappy-qv-title { font-size: 24px; margin: 0; color: var(--text, #111); }
+.zappy-qv-desc { color: var(--text-secondary, #6b7280); font-size: 14px; line-height: 1.5; margin: 0; }
+.zappy-qv-price { display: flex; align-items: baseline; gap: 10px; }
+.zappy-qv-price-now { font-size: 22px; font-weight: 700; color: var(--text, #111); }
+.zappy-qv-price-was { font-size: 15px; color: var(--text-secondary, #9ca3af); text-decoration: line-through; }
+.zappy-qv-variants { display: flex; flex-direction: column; gap: 14px; }
+.zappy-qv-vgroup { display: flex; flex-direction: column; gap: 6px; }
+.zappy-qv-vlabel { font-size: 13px; font-weight: 600; color: var(--text, #374151); }
+.zappy-qv-vvalues { display: flex; flex-wrap: wrap; gap: 8px; }
+.zappy-qv-swatch { width: 30px; height: 30px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.12); background: none; padding: 0; cursor: pointer; position: relative; }
+.zappy-qv-swatch .zappy-qv-swatch-dot { width: 100%; height: 100%; border-radius: 50%; display: block; }
+.zappy-qv-swatch.selected { box-shadow: 0 0 0 2px var(--accent, var(--primary, #ff0083)); border-color: transparent; }
+.zappy-qv-swatch.out-of-stock { opacity: 0.45; }
+.zappy-qv-swatch.out-of-stock::after { content: ''; position: absolute; inset: 0; border-radius: 50%; background: linear-gradient(to top left, transparent calc(50% - 1px), rgba(0,0,0,0.55) 50%, transparent calc(50% + 1px)); }
+.zappy-qv-pill { min-width: 38px; height: 36px; padding: 0 12px; border-radius: 8px; border: 1px solid var(--border-color, #e5e7eb); background: var(--surface, #fff); color: var(--text, #374151); font-size: 13px; font-weight: 600; cursor: pointer; position: relative; }
+.zappy-qv-pill.selected { border-color: var(--accent, var(--primary, #ff0083)); background: var(--accent, var(--primary, #ff0083)); color: #fff; }
+.zappy-qv-pill.out-of-stock { opacity: 0.6; }
+.zappy-qv-pill.out-of-stock::after { content: ''; position: absolute; top: 50%; left: 6px; right: 6px; height: 1px; background: currentColor; transform: rotate(-12deg); pointer-events: none; }
+.zappy-qv-actions { display: flex; align-items: center; gap: 12px; margin-top: 4px; }
+.zappy-qv-qty { display: inline-flex; align-items: center; flex: 0 0 auto; border: 1px solid var(--border-color, #e5e7eb); border-radius: 10px; overflow: hidden; }
+.zappy-qv-qty-btn { width: 38px !important; flex: 0 0 38px; height: 44px; border: none; background: transparent; font-size: 18px; cursor: pointer; color: var(--text, #374151); }
+/* width is !important + fixed flex-basis so a site theme's global "input { width: 100% }"
+   rule can't stretch the stepper input and blow out the actions row. */
+.zappy-qv-qty-input { width: 48px !important; flex: 0 0 48px; min-width: 0; box-sizing: border-box; height: 44px; border: none; text-align: center; font-size: 15px; }
+/* Container-scoped (specificity 0,2,0) so it out-ranks the site theme's
+   "input, textarea, select { padding: 12px 16px }" (and any input[type=...] variant):
+   without this, the 16px side-padding eats the whole 34px input on mobile and the
+   quantity digit gets clipped/hidden behind the +/- buttons. */
+.zappy-qv-qty .zappy-qv-qty-input, .zappy-qv-qty .zappy-qv-qty-btn { padding: 0 !important; }
+.zappy-qv-addcart { flex: 1; min-height: 44px; padding: 0 18px; border: none; border-radius: 10px; background: var(--accent, var(--primary, #ff0083)); color: var(--text-light, #fff); font-weight: 600; font-size: 15px; cursor: pointer; transition: filter 0.18s; text-align: center; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; white-space: nowrap; }
+.zappy-qv-addcart:hover { filter: brightness(0.92); }
+.zappy-qv-addcart.is-disabled, .zappy-qv-addcart:disabled { background: #cbd5e1; cursor: not-allowed; filter: none; }
+.zappy-qv-viewlink { font-size: 13px; color: var(--accent, var(--primary, #ff0083)); text-decoration: underline; align-self: flex-start; }
+@media (max-width: 768px) {
+  .zappy-qv-modal { top: auto; bottom: 0; left: 0; transform: none; width: 100%; height: 80vh; max-height: 80vh; border-radius: 16px 16px 0 0; }
+  .zappy-qv-content { flex-direction: column; max-height: 80vh; overflow-y: auto; }
+  .zappy-qv-gallery { flex: none; }
+  .zappy-qv-main-img { min-height: 240px; height: 38vh; }
+  .zappy-qv-info { flex: none; padding: 20px 18px 24px; }
+  .zappy-qv-title { font-size: 20px; }
+  /* Keep the qty stepper compact + fixed and let the (non-wrapping) Add-to-cart
+     button take the rest on one row, mirroring the desktop layout. */
+  .zappy-qv-actions { gap: 10px; }
+  .zappy-qv-qty { flex: 0 0 auto; }
+  .zappy-qv-qty-btn { width: 32px !important; flex: 0 0 32px; }
+  .zappy-qv-qty-input { width: 34px !important; flex: 0 0 34px; }
+  .zappy-qv-addcart { flex: 1 1 auto; padding: 0 12px; }
+}
 
 /* Product tags (sale, new, featured badges) */
 .product-tag { display: inline-block; padding: 4px 10px; font-size: 11px; font-weight: 600; border-radius: 4px; background: var(--accent, var(--primary)); color: #fff; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 2px 4px rgba(0,0,0,0.15); pointer-events: auto; }
@@ -6195,7 +6236,6 @@ a, button {
 .view-btn.active { background: var(--accent); color: #fff; opacity: 1; }
 .view-btn:hover:not(.active) { background: rgba(255,255,255,0.1); }
 
-.product-grid:not(.view-list) .product-card .product-tags { display: none !important; }
 /* Sidebar */
 .product-sidebar { width: 240px; flex-shrink: 0; position: sticky; top: calc(var(--total-header-height, 120px) + 20px); max-height: calc(100vh - var(--total-header-height, 120px) - 40px); overflow-y: auto; align-self: flex-start; }
 .product-sidebar .sidebar-section { margin-bottom: 20px; }
@@ -6286,7 +6326,7 @@ a, button {
   .products-main .product-grid:not(.view-list) .product-card p { font-size: 11px !important; overflow: hidden !important; margin: 0 0 4px 0 !important; -webkit-line-clamp: 1 !important; display: -webkit-box !important; -webkit-box-orient: vertical !important; }
   .products-main .product-grid:not(.view-list) .product-card.detailed p { -webkit-line-clamp: 5 !important; }
   .products-main .product-grid:not(.view-list) .product-card .price { font-size: 14px !important; padding-top: 2px !important; }
-  .products-main .product-grid:not(.view-list) .product-card .add-to-cart { padding: 6px 10px !important; font-size: 11px !important; margin: 0 10px 10px !important; }
+  .products-main .product-grid:not(.view-list) .product-card .add-to-cart { width: auto !important; padding: 6px 10px !important; font-size: 11px !important; margin: 0 10px 10px !important; }
   .product-grid.view-list { display: flex !important; flex-direction: column !important; gap: 10px !important; }
   .product-grid.view-list .product-card { flex-direction: row; flex-wrap: nowrap; align-items: stretch; overflow: hidden; max-height: none; padding: 0 !important; gap: 0; }
   .product-grid.view-list .product-card .product-card-inner { flex: 1 1 0%; flex-direction: row; gap: 0; min-width: 0; }
@@ -6300,7 +6340,7 @@ a, button {
   .product-grid.view-list .product-card .add-to-cart { flex: 0 0 auto; position: static; padding: 6px 12px; font-size: 11px; margin: 0 10px 10px 0; white-space: nowrap; align-self: center; }
   .card-favorite-btn { width: 30px; height: 30px; top: 6px; right: 6px; left: auto; }
   [dir="rtl"] .card-favorite-btn { left: 6px; right: auto; }
-  .card-favorite-btn svg { width: 15px; height: 15px; }
+  .card-favorite-btn svg, .product-card .card-quickview-btn svg { width: 15px; height: 15px; }
   .product-grid.view-list .card-favorite-btn { top: 6px; right: 6px; left: auto; }
   [dir="rtl"] .product-grid.view-list .card-favorite-btn { left: 6px; right: auto; }
 }
@@ -6744,13 +6784,21 @@ a, button {
   padding-top: 0;
 }
 .checkout-order-details .order-totals-row {
-  display: flex;
-  justify-content: space-between;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: baseline !important;
+  gap: 12px !important;
   padding: 6px 0;
   font-size: 16px;
   color: var(--text-light);
 }
+.checkout-order-details .order-totals-row span:first-child {
+  flex: 1 1 auto;
+  min-width: 0;
+}
 .checkout-order-details .order-totals-row span:last-child {
+  flex: 0 0 auto;
+  text-align: end;
   font-weight: 600;
 }
 .checkout-order-details .order-totals-row.vat-row {
@@ -6789,6 +6837,28 @@ a, button {
   cursor: not-allowed;
   opacity: 0.7;
 }
+
+/* Minimum order amount banner */
+.minimum-order-banner {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  margin-top: 12px;
+  border-radius: 8px;
+  background: #fef3c7;
+  border: 1px solid #fbbf24;
+  color: #92400e !important;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.minimum-order-banner.minimum-order-banner-ok {
+  background: #ecfdf5;
+  border-color: #a7f3d0;
+  color: #047857;
+}
+.minimum-order-banner svg { color: #d97706; }
+.minimum-order-banner.minimum-order-banner-ok svg { color: #059669; }
 
 /* Validation error overrides (prevent theme color inheritance) */
 .field-error {
@@ -7463,6 +7533,13 @@ a, button {
   font-size: 1rem;
   background: transparent;
   color: var(--text-light);
+  padding: 0;
+  -moz-appearance: textfield;
+}
+.product-info .quantity-selector input::-webkit-inner-spin-button,
+.product-info .quantity-selector input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 .product-info .add-to-cart-btn,
 .product-info .add-to-cart {
@@ -7532,6 +7609,133 @@ a, button {
   font-size: 1.5rem;
   margin-bottom: 24px;
   color: var(--text-light);
+}
+
+/* Upsells (frequently bought together) on the product detail page.
+   Rendered inline with the rest of the product info — no card chrome
+   (border / background / radius) so it blends with the surrounding
+   variant selectors and stock badge.
+   The Star Shoes site (and other branded V2 sites) cascade an accent color
+   onto descendant links/text inside .product-info, which made the upsell
+   product names render in the brand accent (e.g. yellow) instead of body
+   text. The selectors below are scoped to .product-upsells and explicitly
+   set color: var(--text-light) so theme accents do NOT bleed into upsell rows.
+   List bullets are also suppressed since the rows render their own checkbox. */
+.product-upsells {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 16px 0;
+}
+.product-upsells .upsells-header { margin: 0 0 8px; }
+.product-upsells .upsells-subtitle {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+.product-upsells .upsells-list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.product-upsells .upsell-row {
+  list-style: none !important;
+  border-top: 1px solid var(--border-dark);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  cursor: pointer;
+  outline: none;
+}
+.product-upsells .upsell-row::marker { content: '' !important; }
+.product-upsells .upsell-row::before { content: none !important; }
+.product-upsells .upsell-row:first-child { border-top: none; }
+.product-upsells .upsell-row:focus-visible {
+  box-shadow: inset 0 0 0 2px var(--accent, var(--primary));
+  border-radius: 4px;
+}
+.product-upsells .upsell-row.is-out-of-stock {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+.product-upsells .upsell-checkbox {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  cursor: pointer;
+  accent-color: var(--accent, var(--primary));
+  margin: 0;
+}
+.product-upsells .upsell-row.is-out-of-stock .upsell-checkbox { cursor: not-allowed; }
+.product-upsells .upsell-row-text {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+.product-upsells .upsell-name {
+  color: var(--text-light);
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-decoration: none;
+  line-height: 1.3;
+  word-break: break-word;
+  max-width: 100%;
+}
+.product-upsells .upsell-name:hover {
+  color: var(--accent, var(--primary));
+  text-decoration: underline;
+}
+.product-upsells .upsell-stock-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  color: #b91c1c;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.product-upsells .upsell-price {
+  color: var(--text-light);
+  font-weight: 600;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.product-upsells .upsell-price.upsell-price-free {
+  color: #047857;
+  background: #d1fae5;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.product-upsells .upsells-total {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--border-dark);
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+.product-upsells .upsells-total-amount {
+  color: var(--text-light);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.product-upsells .upsells-total-count {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+@media (max-width: 480px) {
+  .product-upsells .upsell-row { gap: 8px; }
 }
 
 /* Category page */
@@ -7722,6 +7926,18 @@ a, button {
   transition: transform 0.3s ease;
   box-shadow: -4px 0 20px rgba(0,0,0,0.15);
   box-sizing: border-box;
+}
+#cart-drawer.cart-drawer.ltr {
+  right: 0 !important;
+  left: auto !important;
+  transform: translateX(100%);
+  direction: ltr;
+}
+#cart-drawer.cart-drawer.rtl {
+  left: 0 !important;
+  right: auto !important;
+  transform: translateX(-100%);
+  direction: rtl;
 }
 @supports (height: 100dvh) { .cart-drawer { height: 100dvh; } }
 .cart-drawer.active {
@@ -8251,7 +8467,10 @@ html[lang="ar"] .mobile-search-panel .search-wrapper,
   .nav-menu.active,
   .nav-menu.nav-menu-active,
   #navMenu.active {
+    top: var(--zappy-mobile-menu-top, var(--total-header-height, var(--zappy-navbar-bottom, 70px))) !important;
+    bottom: 0 !important;
     max-height: calc(100dvh - 70px) !important;
+    max-height: calc(100dvh - var(--zappy-mobile-menu-top, var(--total-header-height, var(--zappy-navbar-bottom, 70px)))) !important;
     overflow-y: auto !important;
   }
 
@@ -8426,7 +8645,7 @@ html[lang="ar"] .mobile-search-panel .search-wrapper,
     overflow: visible !important;
     border-radius: 9999px !important;
     border: 1px solid rgba(128,128,128,0.2) !important;
-    background: var(--bg-light, #ffffff) !important;
+    background: var(--bg-light, #fff) !important;
   }
 
   /* Icon color: always use text-dark on mobile since circles are always bg-light.
@@ -8561,7 +8780,7 @@ html[lang="ar"] .mobile-search-panel .search-wrapper,
     justify-content: center !important;
     border-radius: 9999px !important;
     border: 1px solid rgba(128,128,128,0.2) !important;
-    background: var(--bg-light, #ffffff) !important;
+    background: var(--bg-light, #fff) !important;
     color: var(--text-dark, #1a1a1a) !important;
     padding: 0 !important;
     position: relative !important; /* anchor cart badge */
@@ -8729,6 +8948,72 @@ body.zappy-focused-page .zappy-announcement-bar {
   visibility: hidden !important;
 }
 
+/* Hide cookie consent while cart drawer is open; reappears when drawer closes if still needed *//* Checkout focus: hide cookie bar so it does not compete with payment UI *//* Checkout focus: minimal navbar (logo + cart) and compact footer */
+body.zappy-checkout-page nav.navbar:not(.zappy-catalog-menu) .nav-menu,
+body.zappy-checkout-page nav.navbar:not(.zappy-catalog-menu) .nav-links,
+body.zappy-checkout-page nav.navbar:not(.zappy-catalog-menu) .nav-cta,
+body.zappy-checkout-page nav.navbar:not(.zappy-catalog-menu) .nav-right-group .nav-menu,
+body.zappy-checkout-page .lang-switcher,
+body.zappy-checkout-page .nav-icons-right,
+body.zappy-checkout-page .nav-search-box,
+body.zappy-checkout-page .nav-search-toggle,
+body.zappy-checkout-page #mobile-search-toggle,
+body.zappy-checkout-page .mobile-search-panel,
+body.zappy-checkout-page .login-link.nav-login,
+body.zappy-checkout-page .nav-ecommerce-icons > *:not(.cart-link),
+body.zappy-checkout-page .mobile-hamburger-btn,
+body.zappy-checkout-page .mobile-toggle,
+body.zappy-checkout-page .hamburger,
+body.zappy-checkout-page .menu-toggle,
+body.zappy-checkout-page #mobileToggle,
+body.zappy-checkout-page nav.navbar:not(.zappy-catalog-menu) .phone-header-btn,
+body.zappy-checkout-page nav.navbar:not(.zappy-catalog-menu) .mobile-close-btn {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+body.zappy-checkout-page nav.navbar:not(.zappy-catalog-menu) .nav-container {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+}
+body.zappy-checkout-page .nav-brand,
+body.zappy-checkout-page .cart-link.nav-cart,
+body.zappy-checkout-page #cart-drawer-toggle {
+  display: flex !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+body.zappy-checkout-page .nav-ecommerce-icons {
+  display: inline-flex !important;
+  align-items: center !important;
+  margin-inline-start: auto !important;
+}
+@media (max-width: 768px) {
+  body.zappy-checkout-page nav.navbar:not(.zappy-catalog-menu) .nav-menu,
+  body.zappy-checkout-page nav.navbar:not(.zappy-catalog-menu) .nav-menu.active,
+  body.zappy-checkout-page nav.navbar:not(.zappy-catalog-menu) .nav-menu.open {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+/* Footer: keep footer-bottom only; hide whole footer when structure unknown */
+body.zappy-checkout-page .site-footer > *:not(.footer-bottom),
+body.zappy-checkout-page footer.site-footer > *:not(.footer-bottom) {
+  display: none !important;
+  visibility: hidden !important;
+}
+body.zappy-checkout-page .site-footer .footer-bottom,
+body.zappy-checkout-page footer.site-footer .footer-bottom {
+  display: block !important;
+  visibility: visible !important;
+}
+body.zappy-checkout-page .site-footer:not(:has(.footer-bottom)),
+body.zappy-checkout-page footer.site-footer:not(:has(.footer-bottom)) {
+  display: none !important;
+}
+
 /* Catalog menu (secondary navigation) - desktop only */
 /* NOTE: Mobile visibility is handled via @media (max-width: 768px) { .zappy-catalog-menu { display: none !important; } } */
 /* Catalog menu always inherits navbar colors, NOT ecommerce pages bg */
@@ -8788,9 +9073,16 @@ body.zappy-focused-page .zappy-announcement-bar {
 .catalog-menu-categories {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
   flex-wrap: wrap;
   justify-content: center !important;
+}
+.zappy-catalog-menu[dir="ltr"] .catalog-menu-categories,
+.zappy-catalog-menu.ltr .catalog-menu-categories {
+  direction: ltr !important;
+}
+.zappy-catalog-menu[dir="rtl"] .catalog-menu-categories,
+.zappy-catalog-menu.rtl .catalog-menu-categories {
   direction: rtl !important;
 }
 
@@ -8819,7 +9111,9 @@ body.zappy-focused-page .zappy-announcement-bar {
   top: 100% !important;
   right: 0 !important;
   min-width: 200px !important;
+  max-width: min(280px, calc(100vw - 32px)) !important;
   max-height: calc(100vh - 200px) !important;
+  overflow-x: hidden !important;
   overflow-y: auto !important;
   background: var(--bg-light, #fff) !important;
   border-radius: 8px !important;
@@ -8854,10 +9148,13 @@ body.zappy-focused-page .zappy-announcement-bar {
 }
 .catalog-menu-parent > .sub-menu .catalog-menu-item {
   width: 100%;
+  box-sizing: border-box;
   justify-content: flex-start;
   border-radius: 6px;
   padding: 8px 14px;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   display: block;
   color: var(--text-color, var(--text, #333));
   text-decoration: none;
@@ -8876,9 +9173,11 @@ body.zappy-focused-page .zappy-announcement-bar {
     top: 100%;
     right: 0;
     min-width: 200px;
+    max-width: min(280px, calc(100vw - 32px));
     max-height: calc(100vh - 150px) !important;
+    overflow-x: hidden !important;
     overflow-y: auto !important;
-    background: var(--bg-light, #ffffff) !important;
+    background: var(--bg-light, #fff) !important;
     border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.3);
     padding: 8px;
@@ -8912,6 +9211,9 @@ body.zappy-focused-page .zappy-announcement-bar {
     color: var(--text-dark, #1a1a1a);
     text-decoration: none;
     border-radius: 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     transition: background-color 0.2s ease;
   }
   .zappy-products-dropdown .sub-menu a:hover {
@@ -8963,13 +9265,17 @@ section:not(.navbar),
 main,
 .page-container,
 /* IMPORTANT:
-   Use "-section" block matching and exclude BEM elements (class*="__").
+   Match only real class tokens ending in "-section", not substrings.
    This prevents breaking hero background wrappers like:
+   - .home-hero-section-bg
+   - .home-hero-section-scrim
+   - .home-hero-section-overlay
    - .home-hero-section__background
    which MUST remain position:absolute for full-bleed hero media.
    Also exclude divider-wrapper elements which MUST remain position:absolute
    at the bottom of their parent section for seamless section transitions. */
-[class*="-section"]:not([class*="__"]):not([class*="divider-wrapper"]):not([class*="divider_wrapper"]):not(.navbar):not(.zappy-announcement-bar):not(.zappy-catalog-menu):not(.zappy-section-controls):not([class*="zappy-"]) {
+[class$="-section"]:not([class*="__"]):not([class*="divider-wrapper"]):not([class*="divider_wrapper"]):not(.navbar):not(.zappy-announcement-bar):not(.zappy-catalog-menu):not(.zappy-section-controls):not([class*="zappy-"]),
+[class*="-section "]:not([class*="__"]):not([class*="divider-wrapper"]):not([class*="divider_wrapper"]):not(.navbar):not(.zappy-announcement-bar):not(.zappy-catalog-menu):not(.zappy-section-controls):not([class*="zappy-"]) {
   position: relative !important;
   z-index: 1 !important;
 }
@@ -9086,7 +9392,7 @@ main,
   .navbar .sub-menu,
   .navbar ul.sub-menu,
   nav.navbar .sub-menu {
-    background: var(--bg-light, #ffffff) !important;
+    background: var(--bg-light, #fff) !important;
     border-radius: 8px !important;
     box-shadow: 0 4px 20px rgba(0,0,0,0.3) !important;
     margin: 0 !important;
@@ -9124,7 +9430,7 @@ main,
 
   /* Catalog dropdown submenu */
   .zappy-products-dropdown .sub-menu {
-    background: var(--bg-light, #ffffff) !important;
+    background: var(--bg-light, #fff) !important;
     margin: 0 !important;
     padding-top: 12px !important;
   }
@@ -9182,7 +9488,7 @@ main,
     overflow: visible !important;
     border-radius: 9999px !important;
     border: 1px solid rgba(128,128,128,0.2) !important;
-    background: var(--bg-light, #ffffff) !important;
+    background: var(--bg-light, #fff) !important;
   }
 
   /* Icon color: always use text-dark on mobile since circles are always bg-light. */
@@ -9248,8 +9554,8 @@ main,
     opacity: 1 !important;
     visibility: visible !important;
     pointer-events: auto !important;
-    max-height: 60vh !important;
-    overflow-y: auto !important;
+    max-height: none !important;
+    overflow-y: visible !important;
   }
 
   /* Mobile sub-menu: displayed inline inside dark nav panel, NOT as a floating dropdown.
@@ -9280,6 +9586,7 @@ main,
     color: inherit;
     padding: 10px 16px !important;
     border-radius: 0 !important;
+    white-space: normal !important;
   }
   .navbar .sub-menu li a:hover,
   nav.navbar .sub-menu li a:hover,
@@ -9375,7 +9682,7 @@ main,
   padding: 40px 20px !important;
   color: rgba(0,0,0,0.6) !important;
   font-size: 1rem !important;
-  background: var(--bg-light) !important;
+  background: var(--bg-light, #fff) !important;
   border-radius: 12px !important;
   margin: 0 auto !important;
   max-width: 600px !important;
@@ -9871,6 +10178,75 @@ main,
 }
 
 /* ==END ZAPPY V2 E-COMMERCE THEME CSS== */
+/* mobile-submenu-overflow-fix */
+@media (max-width: 768px) {
+  .navbar .sub-menu.mobile-expanded,
+  .nav-menu .sub-menu.mobile-expanded,
+  #navMenu .sub-menu.mobile-expanded,
+  .zappy-products-dropdown .sub-menu.mobile-expanded,
+  .zappy-products-dropdown > .sub-menu.mobile-expanded,
+  .menu-item-has-children > .sub-menu.mobile-expanded {
+    max-height: none !important;
+    overflow-y: visible !important;
+  }
+  .menu-item-has-children,
+  .zappy-products-dropdown,
+  .nav-menu > li.menu-item-has-children {
+    flex-shrink: 0 !important;
+  }
+  .sub-menu a,
+  .navbar .sub-menu a,
+  .navbar .sub-menu li a,
+  nav.navbar .sub-menu li a,
+  .zappy-products-dropdown .sub-menu a {
+    white-space: normal !important;
+  }
+}
+
+
+/* zappy-nav-child-indent */
+.zappy-products-dropdown .zappy-nav-child > a,
+.sub-menu .zappy-nav-child > a {
+  padding-left: 28px !important;
+  font-size: 0.9em !important;
+  opacity: 0.85 !important;
+}
+[dir="rtl"] .zappy-products-dropdown .zappy-nav-child > a,
+[dir="rtl"] .sub-menu .zappy-nav-child > a,
+html[lang="he"] .zappy-products-dropdown .zappy-nav-child > a,
+html[lang="he"] .sub-menu .zappy-nav-child > a,
+html[lang="ar"] .zappy-products-dropdown .zappy-nav-child > a,
+html[lang="ar"] .sub-menu .zappy-nav-child > a {
+  padding-left: 0 !important;
+  padding-right: 28px !important;
+}
+.zappy-products-dropdown .zappy-nav-parent > a,
+.sub-menu .zappy-nav-parent > a {
+  font-weight: 600 !important;
+}
+@media (max-width: 768px) {
+  .nav-menu.active,
+  #navMenu.active {
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+  }
+}
+
+
+/* ========== EMPTY SUBMENU HIDING (Auto-added by Zappy) ========== */
+.sub-menu:empty,
+.dropdown-menu:empty,
+.sub-menu.zappy-empty-submenu,
+.dropdown-menu.zappy-empty-submenu,
+.nav-menu .sub-menu.zappy-empty-submenu,
+nav .sub-menu.zappy-empty-submenu,
+.navbar .sub-menu.zappy-empty-submenu,
+#navMenu .sub-menu.zappy-empty-submenu,
+#navMenu .dropdown-menu.zappy-empty-submenu {
+  display: none !important;
+}
+
 
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
 /* High-specificity rules to ensure RTL positioning wins over any [lang="en"] conflicts */
@@ -9997,6 +10373,23 @@ main,
 }
 
 /* ========== END HERO IMAGE GRADIENT FIX ========== */
+
+
+/* ========== FULLSCREEN HERO OVERFLOW FIX (fullscreen-hero-overflow-fix) ========== */
+@media (max-width: 768px) {
+
+  section[data-hero-type*="fullscreen"] {
+    height: auto !important;
+    min-height: 100svh !important;
+    padding: 0 0 90px 0 !important;
+  }
+  section[data-hero-type*="fullscreen"] > [class*="-container"]:not([class*="bg"]):not([class*="scrim"]):not([class*="divider"]),
+  section[data-hero-type*="fullscreen"] > .container {
+    padding-bottom: 100px !important;
+    min-height: auto !important;
+  }
+}
+/* ========== END FULLSCREEN HERO OVERFLOW FIX ========== */
 
 
 /* ========== PRODUCT ICON STYLES (product-icon-styles) ========== */
@@ -10159,16 +10552,39 @@ main,
     min-width: 0 !important;
   }
   
-  /* CRITICAL: Constrain zoom wrappers on mobile - they often have fixed pixel widths */
+  /* CRITICAL: Constrain zoom wrappers on mobile without breaking saved crop geometry */
   [data-zappy-zoom-wrapper="true"] {
     width: 100% !important;
     max-width: 100% !important;
     min-width: 0 !important;
+    overflow: hidden !important;
+    position: relative !important;
+  }
+
+  /* The zoom wrapper's image is position:absolute (so it contributes 0 to the
+     wrapper's intrinsic content width). Inserted-element parents that carry a
+     desktop pixel height can either collapse to 0px wide or preserve a stale
+     desktop height after their child wrapper shrinks on mobile. Force them
+     to fill the parent container and let the wrapper's aspect-ratio determine
+     the real height, eliminating empty space before following text. */
+  .zappy-inserted-element:has(> [data-zappy-zoom-wrapper="true"]) {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+  }
+
+  .zappy-inserted-element:has(> [data-zappy-zoom-wrapper="true"]) > [data-zappy-zoom-wrapper="true"] {
+    width: 100% !important;
+    max-width: 100% !important;
     height: auto !important;
   }
-  
-  /* Fix zoom wrapper images on mobile - make responsive */
-  [data-zappy-zoom-wrapper="true"] img {
+
+  /* Reset zoom wrapper images on mobile to responsive display.
+     Images with explicit mobile crop overrides are excluded - the JS runtime
+     applies their crop/zoom after page load. */
+  [data-zappy-zoom-wrapper="true"]:not([data-zappy-zoom-wrapper-width-mode="full"]) img:not([data-zappy-mobile-object-position]):not([data-zappy-mobile-zoom]) {
     position: relative !important;
     width: 100% !important;
     height: auto !important;
@@ -10262,6 +10678,25 @@ main,
   section[class*="-hero-section"]:first-of-type,
   main > section:first-child {
     padding-top: 100px !important;
+  }
+
+  /* Split hero (.hero-sbs-wrap) already applies ~100px top padding for the navbar.
+     Without this override, the global rule above stacks and mobile shows ~200px
+     of dead air above the hero image. */
+  main > section:first-child:has(.hero-sbs-wrap),
+  section[class*="-hero-section"]:first-of-type:has(.hero-sbs-wrap) {
+    padding-top: 0 !important;
+  }
+
+  /* Zoom-crop hero portraits: anchor with inset:0 so RTL/LTR matches and cover
+     cropping stays centered (physical left:0 absolute imgs can mis-read in RTL). */
+  .hero-sbs-image-frame [data-zappy-zoom-wrapper="true"] img {
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-height: none !important;
+    object-fit: cover !important;
+    object-position: center center !important;
   }
   
   /* ========== HERO CONTAINER FULL-WIDTH (FULLSCREEN HEROES ONLY) ========== */
@@ -10360,6 +10795,19 @@ main,
   .zappy-inserted-element,
   [data-zappy-zoom-wrapper] {
     max-width: 100% !important;
+  }
+
+  /* ========== FULLSCREEN HERO OVERFLOW FIX ========== */
+
+  section[data-hero-type*="fullscreen"] {
+    height: auto !important;
+    min-height: 100svh !important;
+    padding: 0 0 90px 0 !important;
+  }
+  section[data-hero-type*="fullscreen"] > [class*="-container"]:not([class*="bg"]):not([class*="scrim"]):not([class*="divider"]),
+  section[data-hero-type*="fullscreen"] > .container {
+    padding-bottom: 100px !important;
+    min-height: auto !important;
   }
 }
 
@@ -10475,9 +10923,6 @@ section[data-hero-type] {
 
 /* ========== END GRID RESPONSIVE FIX ========== */
 
-/* Footer contact alignment fix */
-.footer-contact li > a { display: flex; align-items: flex-start; gap: inherit; }
-
 
 /* ZAPPY_VARIANT_OPTION_STATES */
 .variant-option.disabled { opacity: 0.3; position: relative; }
@@ -10488,13 +10933,682 @@ section[data-hero-type] {
 .variant-option.color-swatch.out-of-stock::before { content: ""; position: absolute; top: 50%; left: 2px; right: 2px; height: 1.5px; background: currentColor; transform: rotate(-45deg); pointer-events: none; z-index: 1; }
 
 
+/* ZAPPY_QUANTITY_SELECTOR_FIX */
+.product-info .quantity-selector input,
+.product-add-row .quantity-selector input {
+  padding: 0 !important;
+  -moz-appearance: textfield !important;
+  -webkit-appearance: textfield !important;
+  appearance: textfield !important;
+}
+.product-info .quantity-selector input::-webkit-inner-spin-button,
+.product-info .quantity-selector input::-webkit-outer-spin-button,
+.product-add-row .quantity-selector input::-webkit-inner-spin-button,
+.product-add-row .quantity-selector input::-webkit-outer-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0 !important;
+  display: none !important;
+}
+
+
 /* ZAPPY_CONTACT_FORM_LAYOUT_FIX */
 form.contact-form, .contact-form { flex-direction: column !important; align-items: stretch !important; }
 form.contact-form > .contact-form-field, .contact-form > .contact-form-field { width: 100% !important; align-self: stretch !important; }
 form.contact-form .contact-input, form.contact-form .contact-textarea { width: 100% !important; box-sizing: border-box !important; }
 
 
+/* ZAPPY_NAVBAR_CTA_ALIGNMENT_FIX */
+.nav-cta-container .zappy-search-container,
+.zappy-search-container { align-self: center; }
+.nav-cta-container p { margin: 0 !important; }
+
+
 /* ZAPPY_SECTION_BG_TYPE_FIX */
 [data-zappy-bg-type="color"] { background-image: none !important; background-color: var(--zappy-bg-color, transparent) !important; }
 [data-zappy-bg-type="image"] { background-image: linear-gradient(var(--zappy-bg-overlay, rgba(0,0,0,0)), var(--zappy-bg-overlay, rgba(0,0,0,0))), var(--zappy-bg-image, none) !important; background-size: cover !important; background-position: center !important; background-repeat: no-repeat !important; }
 [data-zappy-bg-type="video"] { background-image: none !important; }
+
+
+/* ZAPPY_IOS_NAVBAR_GAP_FIX */
+/* iOS Safari does not clip overflow-x:hidden on <html>, so a page with any
+   horizontal overflow ends up with visual viewport > layout viewport.
+   position:fixed children anchored with right:0 (the mobile dropdown menu)
+   then pin to the visual viewport right edge — off-screen past the navbar.
+   Companion JS (ZAPPY_IOS_VIEWPORT_GAP_FIX in script.js) measures the gap
+   and exposes it as --ios-viewport-gap; this rule uses it to shift the
+   menu inward so it lands on the real layout-viewport right edge. On every
+   other browser the gap is 0 and the rule is a no-op.
+
+   The selector list below intentionally mirrors the RTL selectors used
+   elsewhere in the stylesheet — we need equal-or-higher specificity to
+   win the cascade (!important alone can't beat higher specificity). */
+@media (max-width: 768px) {
+  .navbar,
+  nav.navbar {
+    width: auto !important;
+    max-width: none !important;
+    left: 0 !important;
+    right: 0 !important;
+    overflow-x: clip !important;
+    box-sizing: border-box !important;
+  }
+  #navMenu,
+  .nav-menu,
+  html[dir="rtl"] .nav-menu,
+  html[dir="rtl"] .navbar .nav-menu,
+  html[dir="rtl"] nav .nav-menu,
+  html[dir="rtl"] header .nav-menu,
+  html[dir="rtl"] .nav-container .nav-menu,
+  [dir="rtl"] .navbar .nav-menu,
+  [dir="rtl"] nav .nav-menu,
+  [dir="rtl"] header .nav-menu,
+  [dir="rtl"] .nav-container .nav-menu,
+  [dir="rtl"] .nav-menu,
+  html[lang="he"] .nav-menu,
+  html[lang="ar"] .nav-menu {
+    /* Force position:fixed so the --ios-viewport-gap shift is measured
+       against the (visual) viewport, not whatever container the menu may
+       have been reparented into by earlier v1/v2 patches.
+       --zappy-navbar-bottom is set by the runtime JS companion and
+       defaults to 70px — this lets us override the v2 `top: 100%` (which
+       with position:fixed would resolve to the full viewport height and
+       push the menu off-screen). */
+    position: fixed !important;
+    top: var(--zappy-navbar-bottom, 70px) !important;
+    right: var(--ios-viewport-gap, 0px) !important;
+  }
+}
+
+
+/* ZAPPY_CART_DRAWER_DIR_OVERRIDE */
+/* Runtime-direction-aware cart drawer placement. Selectors target both
+   html[dir=...] and body[dir=...] so they apply regardless of which element
+   carries the dir attribute, and use #id + .class so they beat any baked
+   class="rtl" / class="ltr" on the aside itself (specificity 0,1,2,1 vs the
+   baked-class rule at 0,1,2,0; the !important on every property completes
+   the override). Generic for every site / language. */
+html[dir="ltr"] #cart-drawer.cart-drawer,
+body[dir="ltr"] #cart-drawer.cart-drawer,
+html[dir="ltr"] .cart-drawer,
+body[dir="ltr"] .cart-drawer {
+  right: 0 !important;
+  left: auto !important;
+  transform: translateX(100%) !important;
+  direction: ltr !important;
+}
+html[dir="rtl"] #cart-drawer.cart-drawer,
+body[dir="rtl"] #cart-drawer.cart-drawer,
+html[dir="rtl"] .cart-drawer,
+body[dir="rtl"] .cart-drawer {
+  left: 0 !important;
+  right: auto !important;
+  transform: translateX(-100%) !important;
+  direction: rtl !important;
+}
+html[dir="ltr"] #cart-drawer.cart-drawer.active,
+body[dir="ltr"] #cart-drawer.cart-drawer.active,
+html[dir="ltr"] .cart-drawer.active,
+body[dir="ltr"] .cart-drawer.active,
+html[dir="rtl"] #cart-drawer.cart-drawer.active,
+body[dir="rtl"] #cart-drawer.cart-drawer.active,
+html[dir="rtl"] .cart-drawer.active,
+body[dir="rtl"] .cart-drawer.active {
+  transform: translateX(0) !important;
+}
+
+
+/* ZAPPY_PRODUCTS_DROPDOWN_LTR_INDENT */
+/* LTR mirror of the [dir="rtl"] indentation block. Equal-or-higher
+   specificity than the shorthand .navbar .sub-menu li a override so the
+   nested sub-category items keep their visual indent on every LTR page —
+   English, Spanish, French, Russian, German, etc. The selectors target
+   dir="ltr" (the source of truth set on <html> by per-language page
+   generation), NOT a specific language code, so the rule stays generic
+   across every site / language combination. */
+[dir="ltr"] .sub-menu .zappy-nav-child > a,
+[dir="ltr"] .zappy-products-dropdown .zappy-nav-child > a,
+html[dir="ltr"] .sub-menu .zappy-nav-child > a,
+html[dir="ltr"] .zappy-products-dropdown .zappy-nav-child > a {
+  padding-left: 28px !important;
+  padding-right: 16px !important;
+  font-size: 0.9em !important;
+  opacity: 0.85 !important;
+}
+@media (max-width: 768px) {
+  [dir="ltr"] .navbar .zappy-products-dropdown > .sub-menu .zappy-nav-child > a,
+  [dir="ltr"] nav.navbar .zappy-products-dropdown > .sub-menu .zappy-nav-child > a,
+  html[dir="ltr"] .navbar .zappy-products-dropdown > .sub-menu .zappy-nav-child > a,
+  html[dir="ltr"] nav.navbar .zappy-products-dropdown > .sub-menu .zappy-nav-child > a {
+    padding-left: 36px !important;
+    padding-right: 16px !important;
+  }
+}
+
+
+/* ZAPPY_MOBILE_NAV_MENU_ITEM_PADDING */
+@media (max-width: 768px) {
+  .navbar .nav-menu.active > li > a,
+  nav.navbar .nav-menu.active > li > a,
+  #navMenu.active > li > a,
+  .nav-menu.open > li > a {
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 12px 16px !important;
+    height: auto !important;
+    min-height: 44px !important;
+    line-height: 1.4 !important;
+  }
+  .navbar .nav-menu.active > li,
+  nav.navbar .nav-menu.active > li,
+  #navMenu.active > li,
+  .nav-menu.open > li {
+    margin: 4px 0 !important;
+  }
+  .navbar .nav-menu.active > li.zappy-products-dropdown > a,
+  nav.navbar .nav-menu.active > li.zappy-products-dropdown > a,
+  #navMenu.active > li.zappy-products-dropdown > a,
+  .nav-menu.open > li.zappy-products-dropdown > a {
+    padding-right: 56px !important;
+  }
+  html[dir="rtl"] .navbar .nav-menu.active > li.zappy-products-dropdown > a,
+  html[dir="rtl"] nav.navbar .nav-menu.active > li.zappy-products-dropdown > a,
+  html[dir="rtl"] #navMenu.active > li.zappy-products-dropdown > a,
+  html[dir="rtl"] .nav-menu.open > li.zappy-products-dropdown > a {
+    padding-right: 16px !important;
+    padding-left: 56px !important;
+  }
+}
+
+/* Cookie Consent Styles */
+/* Cookie Consent Customizations ccCssV13 */
+:root {
+  /* --cc-bg has to STAY translucent (with the matching backdrop-filter on
+   * the bar below) so the slim bar reads as a frosted overlay rather than
+   * a solid horizontal stripe slapped on top of the page. The preferences
+   * modal — which doesn't use backdrop-filter — overrides this to a solid
+   * white below so it doesn't render see-through against the page. */
+  --cc-bg: rgba(255, 255, 255, 0.96);
+  --cc-modal-bg: #ffffff;
+  --cc-primary-color: #1f2937;
+  --cc-secondary-color: #4b5563;
+  --cc-btn-primary-bg: #f36b2c;
+  --cc-btn-primary-color: #ffffff;
+  --cc-btn-primary-border: #f36b2c;
+  --cc-btn-primary-hover-bg: #da5213;
+  --cc-btn-primary-hover-border: #da5213;
+  --cc-btn-primary-hover-color: #ffffff;
+  /* --cc-btn-secondary-* are used by BOTH the bar's "Customize" link and
+   * the preferences modal's "Accept Necessary" / "Save Preferences" pills.
+   * We keep the token defaults sensible (light grey fill, dark text) so
+   * the preferences-modal buttons stay visible, then override only
+   * .zappy-cookie-banner__button--customize directly to render the
+   * Customize link as a transparent underlined text. */
+  --cc-btn-secondary-bg: #f3f4f6;
+  --cc-btn-secondary-color: #1f2937;
+  --cc-btn-secondary-border: #e5e7eb;
+  --cc-btn-secondary-hover-bg: #e5e7eb;
+  --cc-btn-secondary-hover-color: #111827;
+  --cc-btn-secondary-hover-border: #d1d5db;
+  --cc-toggle-on-bg: #f36b2c;
+}
+
+#cc-main,
+#cc--main {
+  font-family: inherit !important;
+  color: var(--cc-primary-color);
+}
+
+/* === Zappy-owned slim bottom bar ===
+ * Single-row inline layout: [description text] ......... [Customize] [Accept]
+ * The banner is our DOM (#zappy-cookie-banner), not the library's #cm
+ * consent modal. That avoids vanilla-cookieconsent's internal
+ * <button><span>Label</span></button> structure entirely.
+ */
+#zappy-cookie-banner {
+  position: fixed !important;
+  inset: auto 0 0 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 10px 56px 10px 20px !important;
+  background: var(--cc-bg) !important;
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  backdrop-filter: saturate(180%) blur(12px);
+  border: none !important;
+  border-top: 1px solid rgba(243, 107, 44, 0.18) !important;
+  border-radius: 0 !important;
+  box-shadow: 0 -1px 12px rgba(0, 0, 0, 0.04) !important;
+  display: flex !important;
+  align-items: center !important;
+  min-height: 52px !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+  z-index: 2147483646;
+}
+
+#zappy-cookie-banner .zappy-cookie-banner__inner {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  flex-wrap: nowrap !important;
+  gap: 16px !important;
+  max-width: 1200px;
+  width: 100% !important;
+  margin: 0 auto;
+  padding: 0 !important;
+  min-height: 32px !important;
+}
+
+#zappy-cookie-banner .zappy-cookie-banner__text {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: block !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  color: var(--cc-primary-color) !important;
+  height: 32px !important;
+  min-height: 32px !important;
+  line-height: 32px !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#zappy-cookie-banner .zappy-cookie-banner__actions {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 8px !important;
+  flex: 0 0 auto;
+  border: none !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+#zappy-cookie-banner .zappy-cookie-banner__button {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  padding: 0 16px !important;
+  height: 32px !important;
+  min-height: 0 !important;
+  line-height: 1 !important;
+  border-radius: 999px !important;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  cursor: pointer;
+}
+
+/* Primary "Accept" — filled pill in site primary color */
+#zappy-cookie-banner .zappy-cookie-banner__button--accept {
+  background-color: var(--cc-btn-primary-bg) !important;
+  color: var(--cc-btn-primary-color) !important;
+  border: 1px solid var(--cc-btn-primary-border) !important;
+}
+
+#zappy-cookie-banner .zappy-cookie-banner__button--accept:hover {
+  background-color: var(--cc-btn-primary-hover-bg) !important;
+  border-color: var(--cc-btn-primary-hover-border) !important;
+}
+
+/* Secondary "Customize" — borderless underlined text link.
+ * Same height as the Accept pill so the row stays perfectly aligned, but
+ * with no fill, no border, and an underline that sits 3px below the
+ * baseline (text-underline-offset). Hard-coded brand color so this rule
+ * doesn't depend on --cc-btn-secondary-* (which have to stay sensible
+ * defaults for the preferences modal's two secondary pills). */
+#zappy-cookie-banner .zappy-cookie-banner__button--customize {
+  background-color: transparent !important;
+  color: #f36b2c !important;
+  border: none !important;
+  padding: 0 8px !important;
+  height: 32px !important;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  border-radius: 6px !important;
+}
+
+#zappy-cookie-banner .zappy-cookie-banner__button--customize:hover {
+  color: #da5213 !important;
+  background-color: transparent !important;
+}
+
+#zappy-cookie-banner .zappy-cookie-banner__close {
+  position: absolute !important;
+  top: 8px !important;
+  right: 12px !important;
+  width: 28px !important;
+  height: 28px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 999px !important;
+  color: var(--cc-secondary-color) !important;
+  font-size: 20px !important;
+  font-weight: 400 !important;
+  line-height: 1 !important;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+#zappy-cookie-banner .zappy-cookie-banner__close:hover {
+  background-color: rgba(0, 0, 0, 0.06) !important;
+  color: var(--cc-primary-color) !important;
+}
+#zappy-cookie-banner .zappy-cookie-banner__button:focus-visible,
+#zappy-cookie-banner .zappy-cookie-banner__close:focus-visible {
+  outline: 2px solid var(--cc-btn-primary-bg) !important;
+  outline-offset: 2px;
+}
+/* RTL: anchor the X to the top-LEFT and shift body padding accordingly. */
+[dir="rtl"] #zappy-cookie-banner {
+  padding: 10px 20px 10px 56px !important;
+}
+[dir="rtl"] #zappy-cookie-banner .zappy-cookie-banner__close {
+  right: auto !important;
+  left: 12px !important;
+}
+
+/* === Preferences modal — minimalist restyle ===
+ * The modal opens when "Customize" is clicked. It MUST render as a solid
+ * card — pre-fix it inherited the bar's translucent --cc-bg without the
+ * matching backdrop-filter, leaving the page footer visibly bleeding
+ * through the modal box, the title, the toggle rows, and the bottom
+ * button row. Solid white box + clean shadow + an explicit slightly
+ * darker scrim on the overlay restores proper modal hierarchy. */
+/* The scrim belongs on wrapper layers only. In vanilla-cookieconsent v3,
+ * .pm / #pm is the preferences card itself, so styling .pm as the dark
+ * overlay makes the card look transparent. */
+#cc-main .pm-wrapper,
+#cc--main .pm-wrapper,
+#cc-main .pm-wrapper.pm--box,
+#cc--main .pm-wrapper.pm--box {
+  background: rgba(0, 0, 0, 0.32) !important;
+}
+
+#cc-main #pm,
+#cc--main #pm,
+#cc-main .pm,
+#cc--main .pm,
+#cc-main .pm .pm__box,
+#cc--main .pm .pm__box,
+#cc-main .pm__box,
+#cc--main .pm__box {
+  background: var(--cc-modal-bg) !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  border-radius: 14px !important;
+  border: 1px solid rgba(0, 0, 0, 0.06) !important;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.18) !important;
+}
+
+#cc-main .pm__header,
+#cc--main .pm__header,
+#cc-main .pm__body,
+#cc--main .pm__body,
+#cc-main .pm__footer,
+#cc--main .pm__footer,
+#cc-main .pm__section,
+#cc--main .pm__section {
+  background: var(--cc-modal-bg) !important;
+}
+
+#cc-main .pm__title,
+#cc--main .pm__title {
+  font-weight: 600 !important;
+  color: var(--cc-primary-color) !important;
+}
+
+#cc-main .pm__btn[data-role="accept-all"],
+#cc--main .pm__btn[data-role="accept-all"] {
+  background-color: var(--cc-btn-primary-bg) !important;
+  border-color: var(--cc-btn-primary-border) !important;
+  color: var(--cc-btn-primary-color) !important;
+  border-radius: 999px !important;
+}
+
+#cc-main .pm__btn[data-role="accept-all"]:hover,
+#cc--main .pm__btn[data-role="accept-all"]:hover {
+  background-color: var(--cc-btn-primary-hover-bg) !important;
+  border-color: var(--cc-btn-primary-hover-border) !important;
+}
+
+/* Secondary modal pills — "Accept Necessary" + "Save Preferences".
+ * Must be a visible solid fill (light grey on white card) so users can
+ * actually find them. Pre-fix these inherited --cc-btn-secondary-bg:
+ * transparent (used by the bar's Customize text link), making them
+ * invisible against the modal background. */
+#cc-main .pm__btn,
+#cc--main .pm__btn {
+  border-radius: 999px !important;
+}
+#cc-main .pm__btn[data-role="necessary"],
+#cc--main .pm__btn[data-role="necessary"],
+#cc-main .pm__btn[data-role="save"],
+#cc--main .pm__btn[data-role="save"] {
+  background-color: var(--cc-btn-secondary-bg) !important;
+  color: var(--cc-btn-secondary-color) !important;
+  border: 1px solid var(--cc-btn-secondary-border) !important;
+}
+#cc-main .pm__btn[data-role="necessary"]:hover,
+#cc--main .pm__btn[data-role="necessary"]:hover,
+#cc-main .pm__btn[data-role="save"]:hover,
+#cc--main .pm__btn[data-role="save"]:hover {
+  background-color: var(--cc-btn-secondary-hover-bg) !important;
+  color: var(--cc-btn-secondary-hover-color) !important;
+  border-color: var(--cc-btn-secondary-hover-border) !important;
+}
+
+/* Toggle thumbs in brand color when on */
+#cc-main .section__toggle:checked + .toggle__icon,
+#cc--main .section__toggle:checked + .toggle__icon,
+#cc-main .section__toggle:checked ~ .toggle__icon,
+#cc--main .section__toggle:checked ~ .toggle__icon {
+  background-color: var(--cc-toggle-on-bg) !important;
+}
+
+/* Mobile fallback: two rows (description on top, buttons below) */
+@media (max-width: 640px) {
+  #zappy-cookie-banner {
+    padding: 10px 14px !important;
+  }
+  #zappy-cookie-banner .zappy-cookie-banner__inner {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 8px !important;
+  }
+  #zappy-cookie-banner .zappy-cookie-banner__text {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    height: auto !important;
+    min-height: 0 !important;
+    line-height: 1.4 !important;
+  }
+  #zappy-cookie-banner .zappy-cookie-banner__actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+  #zappy-cookie-banner .zappy-cookie-banner__button--accept {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+}
+
+/* Cookie preferences button in legal footer keeps default behavior */
+.cookie-preferences-btn:hover {
+  text-decoration: none !important;
+}
+html[dir="rtl"] .whatsapp-float { right: 20px !important; left: auto !important; }
+html[dir="ltr"] .whatsapp-float, html:not([dir]) .whatsapp-float { left: 20px !important; right: auto !important; }
+
+html[dir="rtl"] #mic-access-tool-general-button, html[dir="rtl"] .mic-access-tool-general-button,
+html[dir="rtl"] #mic-init-access-tool .mic-access-tool-general-button,
+html[dir="rtl"] #mic-init-access-tool #mic-access-tool-general-button,
+html[dir="rtl"] ._access-icon { left: 20px !important; right: auto !important; }
+html[dir="ltr"] #mic-access-tool-general-button, html[dir="ltr"] .mic-access-tool-general-button,
+html[dir="ltr"] #mic-init-access-tool .mic-access-tool-general-button,
+html[dir="ltr"] #mic-init-access-tool #mic-access-tool-general-button,
+html[dir="ltr"] ._access-icon,
+html:not([dir]) #mic-access-tool-general-button, html:not([dir]) .mic-access-tool-general-button,
+html:not([dir]) #mic-init-access-tool .mic-access-tool-general-button,
+html:not([dir]) #mic-init-access-tool #mic-access-tool-general-button,
+html:not([dir]) ._access-icon { right: 20px !important; left: auto !important; }
+
+/* LTR: keep image on left for solution-reverse sections */
+html[dir="ltr"] .solution-item.solution-reverse .solution-image { order: -1 !important; }
+html[dir="ltr"] .solution-item.solution-reverse .solution-content { order: 1 !important; }
+html[dir="ltr"] .service-detail.service-reverse .service-detail-image { order: -1 !important; }
+html[dir="ltr"] .service-detail.service-reverse .service-detail-content { order: 1 !important; }
+
+
+/* ZAPPY_MOBILE_NAV_ICON_ALIGNMENT_FIX */
+/* ZAPPY_MOBILE_NAV_ICON_ALIGNMENT_FIX_V3 */
+/* The mobile hamburger / phone buttons are absolutely positioned. Keep the
+   navbar itself as a non-collapsing containing block so auto-margin centering
+   stays aligned even when generated mobile CSS moves every nav child out of flow. */
+@media (max-width: 768px) {
+  .navbar,
+  nav.navbar {
+    min-height: 70px !important;
+  }
+
+  /* Some generated RTL nav CSS sets both left:50% and right:50% on the
+     absolute .nav-brand. That collapses it to 0px wide, so the logo flows
+     left from the center instead of being centered on it. */
+  .navbar .nav-brand,
+  nav.navbar .nav-brand,
+  html[dir="rtl"] .navbar .nav-brand,
+  html[dir="rtl"] nav.navbar .nav-brand,
+  html[lang="he"] .navbar .nav-brand,
+  html[lang="he"] nav.navbar .nav-brand,
+  html[lang="ar"] .navbar .nav-brand,
+  html[lang="ar"] nav.navbar .nav-brand {
+    position: absolute !important;
+    left: 50% !important;
+    right: auto !important;
+    top: 50% !important;
+    width: auto !important;
+    min-width: max-content !important;
+    max-width: calc(100% - 168px) !important;
+    transform: translate(-50%, -50%) !important;
+    margin: 0 !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+
+  .navbar .nav-brand .logo-link,
+  nav.navbar .nav-brand .logo-link,
+  .navbar .nav-brand a,
+  nav.navbar .nav-brand a {
+    display: inline-flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .navbar > .mobile-toggle,
+  nav.navbar > .mobile-toggle,
+  .navbar .mobile-toggle,
+  nav.navbar .mobile-toggle,
+  #mobileToggle,
+  .navbar > .phone-header-btn,
+  nav.navbar > .phone-header-btn,
+  .navbar .phone-header-btn,
+  nav.navbar .phone-header-btn {
+    position: absolute !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    transform: none !important;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+    align-self: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+    line-height: 0 !important;
+  }
+
+  .navbar > .mobile-toggle,
+  nav.navbar > .mobile-toggle,
+  .navbar .mobile-toggle,
+  nav.navbar .mobile-toggle,
+  #mobileToggle {
+    display: flex !important;
+  }
+
+  html:not([data-zappy-site-type="ecommerce"]) .navbar > .phone-header-btn,
+  html:not([data-zappy-site-type="ecommerce"]) nav.navbar > .phone-header-btn,
+  html:not([data-zappy-site-type="ecommerce"]) .navbar .phone-header-btn,
+  html:not([data-zappy-site-type="ecommerce"]) nav.navbar .phone-header-btn {
+    display: flex !important;
+  }
+
+  html[data-zappy-site-type="ecommerce"] .phone-header-btn,
+  body[data-zappy-site-type="ecommerce"] .phone-header-btn,
+  html[data-zappy-site-type="ecommerce"] header .phone-header-btn,
+  html[data-zappy-site-type="ecommerce"] nav .phone-header-btn {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+  }
+}
+
+
+/* ZAPPY_PUBLISHED_MOBILE_MEDIA_FIT_FIX */
+@media (max-width: 768px) {
+  /* Published sites can carry stale editor-generated transform:scale(...) rules.
+     Fullscreen hero backgrounds must keep filling their absolute wrapper; mobile
+     crop runtime can still override this with inline styles when needed. */
+  html body main section[class*="hero"] [data-hero-bg],
+  html body main section[class*="hero"] [data-hero-background="true"],
+  html body main section[data-hero-type*="fullscreen"] img[data-hero-bg],
+  html body main section[data-hero-type*="fullscreen"] img[data-hero-background="true"] {
+    transform: none !important;
+    transform-origin: center center !important;
+    max-width: none !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  /* Filter chip rows should wrap on narrow RTL screens instead of hiding most
+     options off-canvas behind a horizontal scroller. */
+  html body main #showcaseAdvancedFilter .adv-filter-group > .adv-filter-scroll-row,
+  html body main .index-showcase-section #showcaseAdvancedFilter .adv-filter-group > .adv-filter-scroll-row,
+  html body main .index-showcase-section .adv-filter-group > .adv-filter-scroll-row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    padding-inline: 0 !important;
+    margin-inline: 0 !important;
+    height: auto !important;
+    cursor: default !important;
+  }
+}
+
+/* Footer contact alignment fix */
+.footer-contact li > a { display: flex; align-items: flex-start; gap: inherit; }
+
+/* RTL footer contact: icon on the right (start) side, text on the left */
+html[dir="rtl"] .footer-contact li, html[dir="rtl"] .site-footer .footer-contact li, html[dir="rtl"] .site-footer .footer-col:nth-child(3) .footer-contact li { flex-direction: row !important; justify-content: flex-start !important; }
+html[dir="rtl"] .footer-contact .contact-icon { order: 0 !important; }
+html[dir="rtl"] .footer-contact .contact-text { order: 1 !important; }
+html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
+
+/* Spec table BiDi fix: isolate cells so mixed LTR/RTL content renders correctly */
+.specs-table th, .specs-table td { unicode-bidi: plaintext !important; }

@@ -1,4 +1,6 @@
-# Business — Generative Engine Optimization Map
+# רוז פרינט — Generative Engine Optimization Map
+
+> Rose Print is a promotional products printing company with an experienced team specializing in printing on virtually any surface or item. They pride themselves on identifying trends and offering cutting-edge printing solutions, from bottles and phone cases to custom wood blocks, acrylic displays, and recognition plaques. The brand emphasizes exceptional service quality, versatility, and the ability to fulfill any custom printing request with the latest machinery and fastest turnaround times.
 
 ---
 
@@ -48,12 +50,36 @@ Information about WCAG compliance and accessibility features.
 
 ---
 
-# Business Context (for LLM understanding)
+## Products
 
-## About Business
+**Total active products: 1**
+
+### טסט של עדן
+https://rose-print.zappy5.app/product/tst-shl-adn-wxaid6
+- Price: 19.00 ILS (sale, was 99.00 ILS)
+- Availability: In stock
+- Category: כוסות
+- Image: https://rose-print.zappy5.app/assets/product-1773060331182-pqzvs.webp
+
 ---
 
-# Additional Resources
+# Business Context (for LLM understanding)
 
-- **Sitemap**: https://rose-print.zappy5.app/sitemap.xml
-- **Robots.txt**: https://rose-print.zappy5.app/robots.txt
+## About רוז פרינט
+Rose Print is a promotional products printing company with an experienced team specializing in printing on virtually any surface or item. They pride themselves on identifying trends and offering cutting-edge printing solutions, from bottles and phone cases to custom wood blocks, acrylic displays, and recognition plaques. The brand emphasizes exceptional service quality, versatility, and the ability to fulfill any custom printing request with the latest machinery and fastest turnaround times.
+
+## Target Audience
+עסקים המחפשים מוצרי פרסום, קידום מכירות ומתנות ממותגות
+
+## Industry
+הדפסה ומיתוג
+
+---
+
+# Machine-readable feeds
+
+- Sitemap (XML): https://rose-print.zappy5.app/sitemap.xml
+- Robots: https://rose-print.zappy5.app/robots.txt
+- Flattened page text (for LLMs): https://rose-print.zappy5.app/llms-full.txt
+- Products (JSON): https://rose-print.zappy5.app/products.json
+- Products (Google Merchant RSS): https://rose-print.zappy5.app/product-feed.xml

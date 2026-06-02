@@ -1,0 +1,33 @@
+{
+  "@context": "https://schema.org",
+  "generated_at": "2026-06-02T18:16:50.168Z",
+  "base_url": "https://rose-print.zappy5.app",
+  "currency": "ILS",
+  "count": 1,
+  "products": [
+    {
+      "id": "bf17667d-d19f-4437-a78b-6311233f3ba4",
+      "slug": "tst-shl-adn-wxaid6",
+      "name": "טסט של עדן",
+      "name_translations": {},
+      "description": "",
+      "short_description": null,
+      "sku": null,
+      "brand": null,
+      "price": 19,
+      "base_price": 99,
+      "sale_price": 19,
+      "currency": "ILS",
+      "images": [
+        "https://rose-print.zappy5.app/assets/product-1773060331182-pqzvs.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://rose-print.zappy5.app/product/tst-shl-adn-wxaid6",
+      "categories": [
+        "כוסות"
+      ],
+      "updated_at": "2026-03-09T12:48:25.223Z"
+    }
+  ]
+}

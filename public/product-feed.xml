@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:g="http://base.google.com/ns/1.0" version="2.0">
+  <channel>
+    <title>רוז פרינט</title>
+    <link>https://rose-print.zappy5.app</link>
+    <description>Product feed for רוז פרינט</description>
+    <lastBuildDate>Tue, 02 Jun 2026 18:16:50 GMT</lastBuildDate>
+    <item>
+      <g:id>bf17667d-d19f-4437-a78b-6311233f3ba4</g:id>
+      <g:title>טסט של עדן</g:title>
+      <g:description>טסט של עדן</g:description>
+      <g:link>https://rose-print.zappy5.app/product/tst-shl-adn-wxaid6</g:link>
+      <g:image_link>https://rose-print.zappy5.app/assets/product-1773060331182-pqzvs.webp</g:image_link>
+      <g:availability>in_stock</g:availability>
+      <g:price>99.00 ILS</g:price>
+      <g:sale_price>19.00 ILS</g:sale_price>
+      <g:condition>new</g:condition>
+      <g:brand>רוז פרינט</g:brand>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:product_type>כוסות</g:product_type>
+    </item>
+  </channel>
+</rss>
